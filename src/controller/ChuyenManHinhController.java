@@ -6,12 +6,12 @@ package controller;
 
 import baicuoiky.Swing.ThongKe_JPanelFrom;
 import bean.DanhMucBean;
-import btgk_qlbanthietCongNghe.QL_NhanVien_JPanelForm;
 import btgk_qlbanthietCongNghe.QL_SanPham_JPanelForm;
 import btgk_qlbanthietbiCongNghe.QL_HoaDon_JPanelForm;
 import btgk_qlbanthietbiCongNghe.QL_KhachHang_JPanelForm;
 import btgk_qlbanthietbiCongNghe.QL_KhuyenMai_JPanelForm;
 import btgk_qlbanthietbiCongNghe.TrangChu_JPanelForm;
+import btgk_qlbanthietbidientu.QL_NhanVien_JPanelForm;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
@@ -119,15 +119,15 @@ public class ChuyenManHinhController {
 
         @Override
         public void mouseEntered(MouseEvent e) {
-            jpnItem.setBackground(new Color(96, 100, 191));
+            jpnItem.setBackground(new Color(96, 100, 191));//xanh duong
             jlbItem.setBackground(new Color(96, 100, 191));
         }
 
         @Override
         public void mouseExited(MouseEvent e) {
             if (!kinSelected.equalsIgnoreCase(kind)) {
-                jpnItem.setBackground(new Color(76, 175, 80));
-                jlbItem.setBackground(new Color(76, 175, 80));
+                jpnItem.setBackground(new Color(51,204,0));
+                jlbItem.setBackground(new Color(51,204,0));
             }
         }
 
@@ -137,8 +137,8 @@ public class ChuyenManHinhController {
                     item.getJlb().setBackground(new Color(96, 100, 191));
                     item.getJpn().setBackground(new Color(96, 100, 191));
                 } else {
-                    item.getJlb().setBackground(new Color(76, 175, 80));
-                    item.getJpn().setBackground(new Color(76, 175, 80));
+                    item.getJlb().setBackground(new Color(51,204,0));
+                    item.getJpn().setBackground(new Color(51,204,0));
                 }
             }
         }

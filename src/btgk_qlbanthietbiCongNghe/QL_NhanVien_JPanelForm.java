@@ -50,7 +50,7 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
         jTextField4_239 = new javax.swing.JTextField();
         jTextField5_239 = new javax.swing.JTextField();
         jTextField6_239 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jButton1_239 = new javax.swing.JButton();
         jButton2_239 = new javax.swing.JButton();
         jButton3_239 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
@@ -64,7 +64,9 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 235, 193));
 
-        jPanel2_239.setBackground(new java.awt.Color(33, 85, 205));
+        jPanel4.setBackground(new java.awt.Color(204, 255, 204));
+
+        jPanel2_239.setBackground(new java.awt.Color(204, 255, 204));
         jPanel2_239.setBorder(javax.swing.BorderFactory.createTitledBorder("Thiết lập thông tin nhân viên"));
         jPanel2_239.setLayout(new java.awt.GridBagLayout());
 
@@ -254,7 +256,7 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(33, 40, 0, 117);
         jPanel2_239.add(jTextField6_239, gridBagConstraints);
 
-        jButton1.setText("Thêm");
+        jButton1_239.setText("Thêm");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 20;
@@ -262,7 +264,7 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
         gridBagConstraints.ipadx = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(23, 180, 47, 0);
-        jPanel2_239.add(jButton1, gridBagConstraints);
+        jPanel2_239.add(jButton1_239, gridBagConstraints);
 
         jButton2_239.setText("Sửa");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -295,7 +297,7 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(10, 161, 221));
+        jPanel3.setBackground(new java.awt.Color(153, 255, 153));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Lọc"));
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
@@ -337,7 +339,7 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(44, 32, 0, 300);
         jPanel3.add(jComboBox2_239, gridBagConstraints);
 
-        jPanel6.setBackground(new java.awt.Color(121, 218, 232));
+        jPanel6.setBackground(new java.awt.Color(204, 255, 204));
 
         jTable1_239.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -404,7 +406,7 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 524, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -415,7 +417,7 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton1_239;
     private javax.swing.JButton jButton2_239;
     private javax.swing.JButton jButton3_239;
     private javax.swing.JComboBox<String> jComboBox1_239;

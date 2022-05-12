@@ -47,12 +47,13 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
         doanhThu.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 255));
         jLabel1.setText("Thống Kê Doanh Thu");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tất cả" }));
 
         tongTien.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tongTien.setText("Doanh Thu :");
+        tongTien.setText("Doanh thu :");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setText(".....");
@@ -93,6 +94,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
         khoHang.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 255));
         jLabel2.setText("Kho Hàng");
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tất Cả" }));
@@ -101,7 +103,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
         jLabel3.setText("Ðã bán :");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setText("tồn kho :");
+        jLabel4.setText("Tồn kho :");
 
         javax.swing.GroupLayout khoHangLayout = new javax.swing.GroupLayout(khoHang);
         khoHang.setLayout(khoHangLayout);
@@ -138,6 +140,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
         daBan.setBackground(new java.awt.Color(153, 255, 153));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 0, 51));
         jLabel5.setText("Danh Sách Hàng Ðã Bán");
 
         hangDaBan.setModel(new javax.swing.table.DefaultTableModel(

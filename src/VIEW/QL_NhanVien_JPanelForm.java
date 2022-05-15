@@ -271,6 +271,7 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(18, 21, 0, 0);
         JPanelTTNV.add(dienthoai_239, gridBagConstraints);
 
+        btThem_239.setBackground(new java.awt.Color(153, 153, 255));
         btThem_239.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btThem_239.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/plus.png"))); // NOI18N
         btThem_239.setText("Thêm");
@@ -283,6 +284,7 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(6, 116, 17, 0);
         JPanelTTNV.add(btThem_239, gridBagConstraints);
 
+        btSua_239.setBackground(new java.awt.Color(153, 153, 255));
         btSua_239.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btSua_239.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/sua.png"))); // NOI18N
         btSua_239.setText("Sửa");
@@ -296,6 +298,7 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(6, 6, 17, 0);
         JPanelTTNV.add(btSua_239, gridBagConstraints);
 
+        btLammoi_239.setBackground(new java.awt.Color(153, 153, 255));
         btLammoi_239.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btLammoi_239.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/refresh.png"))); // NOI18N
         btLammoi_239.setText("Làm mới");
@@ -308,6 +311,7 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(6, 6, 17, 0);
         JPanelTTNV.add(btLammoi_239, gridBagConstraints);
 
+        btLuu_239.setBackground(new java.awt.Color(153, 153, 255));
         btLuu_239.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btLuu_239.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/luu.png"))); // NOI18N
         btLuu_239.setText("Lưu");
@@ -380,12 +384,12 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
 
         jTable1_239.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Mã NV", "Mật khẩu", "Tên NV", "Vai trò", "Địa chỉ", "Điện thoại", "Ngảy sinh", "Giới tính", "Email", "Trạng thái"
+                "Mã NV", "Tên NV", "Vai trò", "Địa chỉ", "Điện thoại", "Ngảy sinh", "Giới tính", "Email", "Trạng thái"
             }
         ));
         jScrollPane1.setViewportView(jTable1_239);

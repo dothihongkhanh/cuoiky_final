@@ -4,14 +4,14 @@
  */
 package controller;
 
-import baicuoiky.Swing.ThongKe_JPanelFrom;
+import VIEW.ThongKe_JPanelFrom;
 import bean.DanhMucBean;
-import btgk_qlbanthietCongNghe.QL_SanPham_JPanelForm;
-import btgk_qlbanthietbiCongNghe.QL_HoaDon_JPanelForm;
-import btgk_qlbanthietbiCongNghe.QL_KhachHang_JPanelForm;
-import btgk_qlbanthietbiCongNghe.QL_KhuyenMai_JPanelForm;
-import btgk_qlbanthietbiCongNghe.TrangChu_JPanelForm;
-import btgk_qlbanthietbidientu.QL_NhanVien_JPanelForm;
+import VIEW.QL_SanPham_JPanelForm;
+import VIEW.QL_HoaDon_JPanelForm;
+import VIEW.QL_KhachHang_JPanelForm;
+import VIEW.QL_KhuyenMai_JPanelForm;
+import VIEW.TrangChu_JPanelForm;
+import VIEW.QL_NhanVien_JPanelForm;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.MouseEvent;

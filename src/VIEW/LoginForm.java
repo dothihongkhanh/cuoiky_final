@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Sale_Manager;
+package VIEW;
 
-import btgk_qlbanthietbiCongNghe.Main;
+import VIEW.Main;
 
 /**
  *

@@ -49,7 +49,7 @@
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="jPanel2" max="32767" attributes="0"/>
                       <Component id="jPanel1" pref="889" max="32767" attributes="0"/>
-                      <Component id="jPanel3" alignment="0" pref="889" max="32767" attributes="0"/>
+                      <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -93,7 +93,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="167" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="177" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -252,15 +252,13 @@
                                   <Component id="jLabel4" alignment="1" min="-2" pref="133" max="-2" attributes="0"/>
                                   <Component id="lblPhuongThucThanhToan_229" alignment="1" min="-2" pref="134" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jLabel5" alignment="1" min="-2" pref="134" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jScrollPane2" max="32767" attributes="0"/>
-                              <Component id="txtPhuongThucThanhToan_229" max="32767" attributes="0"/>
                               <Component id="txtThanhTien_229" max="32767" attributes="0"/>
-                              <Component id="jScrollPane3" alignment="0" max="32767" attributes="0"/>
                               <Component id="jDateChooser1" max="32767" attributes="0"/>
+                              <Component id="cmbPhuongThucThanhToan_229" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
@@ -280,8 +278,8 @@
                                           <Component id="jScrollPane2" min="-2" pref="66" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="txtPhuongThucThanhToan_229" alignment="3" max="32767" attributes="0"/>
                                               <Component id="lblPhuongThucThanhToan_229" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                              <Component id="cmbPhuongThucThanhToan_229" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
@@ -294,13 +292,7 @@
                                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                       <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="txtThanhTien_229" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblThanhTien_229" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jScrollPane3" min="-2" pref="42" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -333,32 +325,33 @@
                                           </Group>
                                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
-                                                  <Component id="jDateChooser2" min="-2" max="-2" attributes="0"/>
-                                              </Group>
                                               <Component id="jLabel2" min="-2" pref="22" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="103" groupAlignment="3" attributes="0">
+                                                          <Component id="lblThanhTien_229" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="txtThanhTien_229" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Component id="jDateChooser2" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
                                           </Group>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="lblGia_229" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
-                                          <Component id="txtGia_229" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="jLabel5" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblGia_229" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
+                                      <Component id="txtGia_229" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
+                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="txtPhuongThucThanhToan_229">
-                </Component>
                 <Component class="javax.swing.JLabel" name="jLabel3">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&#x110;&#x1ecb;a ch&#x1ec9; giao h&#xe0;ng :"/>
@@ -431,11 +424,6 @@
                 </Container>
                 <Component class="javax.swing.JTextField" name="txtThanhTien_229">
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel5">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Ghi ch&#xfa;:"/>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JLabel" name="jLabel4">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Th&#x1edd;i gian giao h&#xe0;ng:"/>
@@ -481,21 +469,6 @@
                     <Property name="text" type="java.lang.String" value="Gi&#xe1;"/>
                   </Properties>
                 </Component>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane3">
-                  <AuxValues>
-                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                  </AuxValues>
-
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                  <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="jTextArea2">
-                      <Properties>
-                        <Property name="columns" type="int" value="20"/>
-                        <Property name="rows" type="int" value="5"/>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
                 <Component class="javax.swing.JComboBox" name="jComboBox1">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -525,6 +498,19 @@
                 <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
                 </Component>
                 <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser2">
+                </Component>
+                <Component class="javax.swing.JComboBox" name="cmbPhuongThucThanhToan_229">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="2">
+                        <StringItem index="0" value="Ti&#x1ec1;n m&#x1eb7;t"/>
+                        <StringItem index="1" value="Th&#x1ebb; t&#xed;n d&#x1ee5;ng"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>

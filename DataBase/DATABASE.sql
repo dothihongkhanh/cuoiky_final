@@ -1,9 +1,10 @@
-create database QUANLITHIETBICONGNGHE_KLN
-use QUANLITHIETBICONGNGHE_KLN
+create database QUANLITHIETBICONGNGHE_K
+go
+use QUANLITHIETBICONGNGHE_K
 GO 
 create table KhachHang
 (
-	maKH int  primary key not null,
+	maKH int  primary key not null identity(1,1),
 	tenKH nvarchar(50) not null,
 	diaChi nvarchar(80) not null,
 	SDT varchar(11) not null,
@@ -12,8 +13,8 @@ create table KhachHang
 go 
 create table NhanVien
 (
-	maNV int not null primary key,
-	tenNV nvarchar(50) not null,
+	maNV int not null primary key identity(1,1),
+	tenNV nvarchar(50) not null ,
 	vaiTro nvarchar(50) not null,
 	diaChi nvarchar(80) ,
 	SDT varchar(11) not null,
@@ -25,7 +26,7 @@ create table NhanVien
 go 
  create table SanPham
  (
-	maSP int not null primary key,
+	maSP int not null primary key identity(1,1),
 	tenSP nvarchar(50) not null,
 	donGiaBan money not null,
 	soLuongHienCon int not null
@@ -34,7 +35,7 @@ go
  go 
  create table HoaDon
  (
-	maDH int not null primary key,
+	maDH int not null primary key identity(1,1),
 	tenSP nvarchar(50) not null,
 	soLuongDat int not null,
 	thoiGianBaoHanh date ,
@@ -52,7 +53,7 @@ go
 go 
 create table KhuyenMai
 (
-	maKM int not null primary key,
+	maKM int not null primary key identity(1,1),
 	tenCTKM nvarchar(50) not null,
 	mucGiamGia int not null,
 	ngayBatDau date ,

@@ -10,26 +10,26 @@ package MODEL;
  * @author Khanhle
  */
 public class QL_SanPham_211 {
-     private int maHH_211;
-    private String tenHH_211;
+     private int maSP_211;
+    private String tenSP_211;
     private String gia_211;
     private String donvitinh_211;
     private String soLuongHienCon_211;
 
- public int getMaHH_211() {
-        return maHH_211;
+ public int getMaSP_211() {
+        return maSP_211;
     }
 
-    public void setMaHH_211(int maHH_211) {
-        this.maHH_211 = maHH_211;
+    public void setMaSP_211(int maSP_211) {
+        this.maSP_211 = maSP_211;
     }
 
-    public String getTenHH_211() {
-        return tenHH_211;
+    public String getTenSP_211() {
+        return tenSP_211;
     }
 
-    public void setTenHH_211(String tenHH_211) {
-        this.tenHH_211 = tenHH_211;
+    public void setTenSP_211(String tenSP_211) {
+        this.tenSP_211 = tenSP_211;
     }
 
     public String getGia_211() {

@@ -17,6 +17,7 @@
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="cc" green="cc" red="cc" type="rgb"/>
     </Property>
+    <Property name="name" type="java.lang.String" value="QL_SanPham_211" noResource="true"/>
   </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -120,6 +121,7 @@
                         <Column editable="true" title="S&#x1ed1; L&#x1b0;&#x1ee3;ng Hi&#x1ec7;n C&#xf2;n" type="java.lang.Object"/>
                       </Table>
                     </Property>
+                    <Property name="name" type="java.lang.String" value="Bang_211" noResource="true"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -236,6 +238,7 @@
                   <Image iconType="3" name="/IMG/plus.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Th&#xea;m"/>
+                <Property name="name" type="java.lang.String" value="Them_211" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[125, 50]"/>
                 </Property>
@@ -256,19 +259,29 @@
                   <Image iconType="3" name="/IMG/refresh.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="L&#xe0;m m&#x1edb;i"/>
+                <Property name="name" type="java.lang.String" value="Lammoi_211" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[125, 50]"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="java.awt.TextField" name="textField1">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="maHH_211" noResource="true"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textField1ActionPerformed"/>
               </Events>
             </Component>
             <Component class="java.awt.TextField" name="textField2">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="tenHH_211" noResource="true"/>
+              </Properties>
             </Component>
             <Component class="java.awt.TextField" name="textField3">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="gia_211" noResource="true"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="jComboBox1">
               <Properties>
@@ -280,6 +293,7 @@
                     <StringItem index="3" value="Item 4"/>
                   </StringArray>
                 </Property>
+                <Property name="name" type="java.lang.String" value="donvitinh_211" noResource="true"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -297,6 +311,7 @@
                   <Image iconType="3" name="/IMG/sua.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="S&#x1eed;a"/>
+                <Property name="name" type="java.lang.String" value="Sua_211" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[125, 50]"/>
                 </Property>
@@ -334,6 +349,7 @@
                   <Image iconType="3" name="/IMG/xoa.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="X&#xf3;a"/>
+                <Property name="name" type="java.lang.String" value="Xoa_211" noResource="true"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[125, 50]"/>
                 </Property>
@@ -343,6 +359,9 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField1">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="soLuongHienCon_211" noResource="true"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>

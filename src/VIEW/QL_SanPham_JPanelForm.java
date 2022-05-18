@@ -54,6 +54,7 @@ public class QL_SanPham_JPanelForm extends javax.swing.JPanel {
         jButton5.setText("jButton5");
 
         setBackground(new java.awt.Color(204, 204, 204));
+        setName("QL_SanPham_211"); // NOI18N
 
         jPanel3.setBackground(new java.awt.Color(204, 255, 204));
 
@@ -68,6 +69,7 @@ public class QL_SanPham_JPanelForm extends javax.swing.JPanel {
                 "Mã Hàng Hóa", "Tên Hàng Hóa", "Giá", "Đơn Vị Tính", "Số Lượng Hiện Còn"
             }
         ));
+        jTable1.setName("Bang_211"); // NOI18N
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -95,6 +97,7 @@ public class QL_SanPham_JPanelForm extends javax.swing.JPanel {
         jButton1.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/plus.png"))); // NOI18N
         jButton1.setText("Thêm");
+        jButton1.setName("Them_211"); // NOI18N
         jButton1.setPreferredSize(new java.awt.Dimension(125, 50));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,20 +109,28 @@ public class QL_SanPham_JPanelForm extends javax.swing.JPanel {
         jButton6.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/refresh.png"))); // NOI18N
         jButton6.setText("Làm mới");
+        jButton6.setName("Lammoi_211"); // NOI18N
         jButton6.setPreferredSize(new java.awt.Dimension(125, 50));
 
+        textField1.setName("maHH_211"); // NOI18N
         textField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textField1ActionPerformed(evt);
             }
         });
 
+        textField2.setName("tenHH_211"); // NOI18N
+
+        textField3.setName("gia_211"); // NOI18N
+
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "JPI", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setName("donvitinh_211"); // NOI18N
 
         jButton2.setBackground(new java.awt.Color(153, 153, 255));
         jButton2.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/sua.png"))); // NOI18N
         jButton2.setText("Sửa");
+        jButton2.setName("Sua_211"); // NOI18N
         jButton2.setPreferredSize(new java.awt.Dimension(125, 50));
 
         jLabel2.setText("Tên Hàng Hóa");
@@ -134,12 +145,15 @@ public class QL_SanPham_JPanelForm extends javax.swing.JPanel {
         jButton3.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/xoa.png"))); // NOI18N
         jButton3.setText("Xóa");
+        jButton3.setName("Xoa_211"); // NOI18N
         jButton3.setPreferredSize(new java.awt.Dimension(125, 50));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+
+        jTextField1.setName("soLuongHienCon_211"); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

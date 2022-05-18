@@ -1,6 +1,6 @@
-create database QUANLITHIETBICONGNGHE_K
+create database QUANLITHIETBICONGNGHE_KLN
 go
-use QUANLITHIETBICONGNGHE_K
+use QUANLITHIETBICONGNGHE_KLN
 GO 
 create table KhachHang
 (
@@ -37,18 +37,14 @@ go
  (
 	maDH int not null primary key identity(1,1),
 	tenSP nvarchar(50) not null,
-	soLuongDat int not null,
 	thoiGianBaoHanh date ,
 	diaChiGiaoHang nvarchar(80) not null,
 	phuongThucThanhToan nvarchar(30) not null,
 	thoiGianGiaoHang date,
-	thanhTien money,
 	maKH int  not null,
 	maNV int not null,
-	maSP int not null,
 	constraint FK_HDKH_KH foreign key (maKH) references KhachHang(maKH),
 	constraint FK_HDNV_NV foreign key (maNV) references NhanVien(maNV),
-	constraint FK_HDSP_SP foreign key (maSP) references SanPham(maSP)
 )
 go 
 create table KhuyenMai
@@ -59,6 +55,22 @@ create table KhuyenMai
 	ngayBatDau date ,
 	ngayKetThuc date,
 	moTa nvarchar(50),
-	maSP int not null,
-	constraint FK_KMSP_SP foreign key (maSP) references SanPham(maSP)
 )
+create table ChiTietHoaDon(
+	maDH int not null,
+	maSP int not null,
+	soLuongDat int ,
+	 primary key( maSP,maDH),
+	constraint FK_CTHD_MSP foreign key (maSP) references SanPham (maSP),
+	constraint FK_CTHD_MDH foreign key (maDH) references HoaDon(maDH),
+)
+CREATE TABLE SanPhamKM
+(
+	maSP int not null ,
+	constraint FK_SPKM_SP foreign key (maSP) references SanPham(maSP),
+	maKM int not null ,
+	constraint FK_SPKM_TTKM foreign key (maKM) references KhuyenMai(maKM),
+	primary key (maSP, maKM),
+	giaTriGiam int null
+)
+

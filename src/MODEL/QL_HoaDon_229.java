@@ -13,12 +13,12 @@ public class QL_HoaDon_229 {
 
     int maHD;
     String tenSP;
-    private int soLuongDat;
-    private String thoiGianBaoHanh;
-    private String diaChiGiaoHang;
-    private String phuongThucThanhToan;
-    private String thoiGianGiaoHang;
-    private Double thanhTien;
+    private int soLuongDat_229;
+    private String thoiGianBaoHanh_229;
+    private String diaChiGiaoHang_229;
+    private String phuongThucThanhToan_229;
+    private String thoiGianGiaoHang_229;
+    private Double thanhTien_229;
 
     public QL_HoaDon_229() {
     }
@@ -39,53 +39,52 @@ public class QL_HoaDon_229 {
         this.tenSP = tenSP;
     }
 
-    public int getSoLuongDat() {
-        return soLuongDat;
+    public int getSoLuongDat_229() {
+        return soLuongDat_229;
     }
 
-    public void setSoLuongDat(int soLuongDat) {
-        this.soLuongDat = soLuongDat;
+    public void setSoLuongDat_229(int soLuongDat_229) {
+        this.soLuongDat_229 = soLuongDat_229;
     }
 
-    public String getThoiGianBaoHanh() {
-        return thoiGianBaoHanh;
+    public String getThoiGianBaoHanh_229() {
+        return thoiGianBaoHanh_229;
     }
 
-    public void setThoiGianBaoHanh(String thoiGianBaoHanh) {
-        this.thoiGianBaoHanh = thoiGianBaoHanh;
+    public void setThoiGianBaoHanh_229(String thoiGianBaoHanh_229) {
+        this.thoiGianBaoHanh_229 = thoiGianBaoHanh_229;
     }
 
-    public String getDiaChiGiaoHang() {
-        return diaChiGiaoHang;
+    public String getDiaChiGiaoHang_229() {
+        return diaChiGiaoHang_229;
     }
 
-    public void setDiaChiGiaoHang(String diaChiGiaoHang) {
-        this.diaChiGiaoHang = diaChiGiaoHang;
+    public void setDiaChiGiaoHang_229(String diaChiGiaoHang_229) {
+        this.diaChiGiaoHang_229 = diaChiGiaoHang_229;
     }
 
-    public String getPhuongThucThanhToan() {
-        return phuongThucThanhToan;
+    public String getPhuongThucThanhToan_229() {
+        return phuongThucThanhToan_229;
     }
 
-    public void setPhuongThucThanhToan(String phuongThucThanhToan) {
-        this.phuongThucThanhToan = phuongThucThanhToan;
+    public void setPhuongThucThanhToan_229(String phuongThucThanhToan_229) {
+        this.phuongThucThanhToan_229 = phuongThucThanhToan_229;
     }
 
-    public String getThoiGianGiaoHang() {
-        return thoiGianGiaoHang;
+    public String getThoiGianGiaoHang_229() {
+        return thoiGianGiaoHang_229;
     }
 
-    public void setThoiGianGiaoHang(String thoiGianGiaoHang) {
-        this.thoiGianGiaoHang = thoiGianGiaoHang;
+    public void setThoiGianGiaoHang_229(String thoiGianGiaoHang_229) {
+        this.thoiGianGiaoHang_229 = thoiGianGiaoHang_229;
     }
 
-    public Double getThanhTien() {
-        return thanhTien;
+    public Double getThanhTien_229() {
+        return thanhTien_229;
     }
 
-    public void setThanhTien(Double thanhTien) {
-        this.thanhTien = thanhTien;
+    public void setThanhTien_229(Double thanhTien_229) {
+        this.thanhTien_229 = thanhTien_229;
     }
-    
 
 }

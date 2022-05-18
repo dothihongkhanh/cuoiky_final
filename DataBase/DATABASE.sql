@@ -1,4 +1,4 @@
-create database QUANLITHIETBICONGNGHE_KLN
+﻿create database QUANLITHIETBICONGNGHE_KLN
 go
 use QUANLITHIETBICONGNGHE_KLN
 GO 
@@ -73,4 +73,32 @@ CREATE TABLE SanPhamKM
 	primary key (maSP, maKM),
 	giaTriGiam int null
 )
+--TAO RANG BUOC
+--Email: có chứa @, bắt đầu là chữ cái viết thường hoặc viết hoa (thuộc 1 trong 3 dịch vụ mail: Gmail hoặc Yahoo Mail hoặc ute.udn.vn mail); và phải là duy nhất
+alter table NhanVien
+	add constraint UQ_NV_Email unique(email),
+		constraint CK_NV_Email check (email like '[A-Za-z]%@gmail.com'
+									or email like'[A-Za-z]%@yahoo.com'
+									or email like '[A-Za-z]%@ute.udn.vn')
 
+--SDT là dãy các chữ số gồm 10 hoặc 11 chữ số, và phải đảm bảo duy nhất
+alter table KhachHang 
+	add constraint UQ_KH_SDT unique (SDT),
+	constraint CK_KH_SDT
+	check (SDT like '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+		or SDT like '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')
+alter table NhanVien 
+	add constraint UQ_NV_SDT unique (SDT),
+	constraint CK_NV_SDT
+	check (SDT like '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+		or SDT like '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')
+--soLuongDat> 0
+alter table ChiTietHoaDon 
+	add constraint CK_CTHD_SLD
+		check (soLuongDat > (0) )
+--donGiaBan >0 va soLuongHienCon > 0
+alter table SanPham
+	add constraint CK_SP_DGB
+		check (donGiaBan >(0)),
+		constraint CK_SP_SLHC
+		check (soLuongHienCon>(0))

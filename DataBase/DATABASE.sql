@@ -37,9 +37,9 @@ go
  (
 	maDH int not null primary key identity(1,1),
 	tenSP nvarchar(50) not null,
-	thoiGianBaoHanh date ,
 	diaChiGiaoHang nvarchar(80) not null,
 	phuongThucThanhToan nvarchar(30) not null,
+	thoiGianThanhToan date,
 	thoiGianGiaoHang date,
 	maKH int  not null,
 	maNV int not null,

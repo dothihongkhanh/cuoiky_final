@@ -128,3 +128,25 @@ insert into KhachHang(tenKH,diaChi,SDT,gioiTinh)
 		(N'Phạm Ngọc Mai',N'Quảng Nam','0123456689',N'Nữ'),
 		(N'Lê Minh Đức',N'Đà Nẵng','0123456779',default)
 		--select * from KhachHang
+go
+insert into SanPham(maSP,tenSP,donGiaBan,soLuongHienCon) 
+			values ('SP00001',N'Samsung Galaxy S22 Ultra 5G','30.990.000đ','30'),
+					('SP00002',N'iPhone 11','12.490.000đ','40'),
+					('SP00003',N'OPPO Ren7 series','10.490.000đ','35'),
+					('SP00004',N'iPhone 13 Pro','27.490.000đ','20'),
+					('SP00005',N'iphone 12 Pro','26.290.000đ','26'),
+					('SP00006',N'Bàn phím có dây Gaming Asus TUF K1','990.000đ','30'),
+					('SP00007',N'Chuột không dây Gaming Asus TUF M4 WL','1.190.000đ','34'),
+					('SP00008',N'Chuột có dây Gaming Asus Keris','1.250.000đ','20'),
+					('SP00009',N'Bàn phím có dây DareU EK87 ','649.000đ','30'),
+					('SP00010',N'Bàn phím cơ có dây Gaming Razer BlackWidow','2.880.000đ','15'),
+					('SP00011',N'Chuột không dây Rapoo M20 Plus Đen','200.000đ','30'),
+					('SP00012',N'Cáp Type C- Lightning Apple MM0A3','501.000đ','60'),
+					('SP00013',N'Sạc Hydrus CS-TC027','60.000đ','40'),
+					('SP00014',N'Cáp Type C Xmobile MU09-1000X','75.000đ','40'),
+					('SP00015',N'Đế sạc không dây Mbest AC63F3','1750.000đ','25'),
+					('SP00016',N'Tai nghe Bluetooth AirPods 2 Wireless charge Apple MRXJ2','5.590.000đ','40'),
+					('SP00017',N'Tai nghe Bluetooth AirPods 3 Apple MME73','5.490.000đ','30'),
+					('SP00018',N'Tai nghe có dây Mozard DS510-WB','120.000đ','30'),
+					('SP00019',N'Tai nghe Bluetooth Chụp Tai Kanen K6','600.000đ','26'),
+					('SP00020',N'Tai nghe EP Gaming Asus Rog Cetra II Core','1.290.000đ','20')

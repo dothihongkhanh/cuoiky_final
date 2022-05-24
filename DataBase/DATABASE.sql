@@ -129,6 +129,22 @@ insert into KhachHang(tenKH,diaChi,SDT,gioiTinh)
 		(N'Lê Minh Đức',N'Đà Nẵng','0123456779',default)
 		--select * from KhachHang
 go
+set dateformat dmy
+go
+insert into NhanVien(tenNV,diaChi,SDT,vaiTro,ngaySinh,gioiTinh,email,trangThai)
+	values
+		(N'Nguyễn Thanh Vân',N'17 Đống Đa','0905123123',N'Nhân viên kho','16/05/1991',N'Nữ','thanhvan@gmail.com',N'Đang làm việc'),
+		(N'Ngô Ánh Quỳnh',N'63 Lê Đại Hành','0917989586',N'Nhân viên bán hàng','28/04/1989',N'Nữ','anhquynh@gmail.com',N'Đang làm việc'),
+		(N'Võ Hoài Nam',N'95 Trần Cao Vân','0913564278',N'Nhân viên bán hàng','26/04/2000',N'Nam','hoainam@gmail.com',N'Đang làm việc'),
+		(N'Trần Thanh Huy',N'85 Nguyễn Tất Thành','0856324596',N'Nhân viên giữ xe','23/07/2000',N'Nam','thanhhuy@gmail.com',N'Đang làm việc'),
+		(N'Nguyễn Hoài Anh',N'23 Lê Lợi','0589632147',N'Nhân viên bán hàng','07/12/1976',N'Nam','hoaianh@gmail.com',N'Đã nghỉ việc'),
+		(N'Đặng Lê Như',N'56 Hải Phòng','0569832614',N'Nhân viên bán hàng','15/10/1996',N'Nữ','lenhu@gmail.com',N'Đang làm việc'),
+		(N'Lê Hạ An',N'18 Ông Ích Khiêm ','0185239745',N'Nhân viên kho','28/09/2002',N'Nữ','haan@gmail.com',N'Đang làm việc'),
+		(N'Nguyễn Anh Tuấn',N'26 Thanh Sơn','0888487524',N'Nhân viên giữ xe','08/08/1997',N'Nam','anhtuan@gmail.com',N'Đang làm việc'),
+		(N'Trần Hoàng Mi',N'106 Ngô Quyền','0906325489',N'Nhân viên bán hàng','12/06/1970',N'Nữ','hoangmi@gmail.com',N'Đã nghỉ việc'),
+		(N'Thái Ánh Linh',N'25 Lý Tự Trọng','0256347852',N'Nhân viên bán hàng','16/04/1988',N'Nữ','anhlinh@gmail.com',N'Đang làm việc')
+		--select * from NhanVien
+go
 insert into SanPham(tenSP,donGiaBan,soLuongHienCon) 
 			values (N'Samsung Galaxy S22 Ultra 5G','30.990.000đ','30'),
 					(N'iPhone 11','12.490.000đ','40'),

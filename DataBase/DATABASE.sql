@@ -8,7 +8,7 @@ create table KhachHang
 	tenKH nvarchar(50) not null,
 	diaChi nvarchar(80) not null,
 	SDT varchar(11) not null,
-	gioiTinh bit null
+	gioiTinh nvarchar(3)
 )
 go 
 create table NhanVien
@@ -19,10 +19,11 @@ create table NhanVien
 	diaChi nvarchar(80) ,
 	SDT varchar(11) not null,
 	ngaySinh date ,
-	gioiTinh bit ,
+	gioiTinh nvarchar(3),
 	email varchar(50),
 	trangThai nvarchar(30)
 )
+
 go 
  create table SanPham
  (
@@ -102,3 +103,28 @@ alter table SanPham
 		check (donGiaBan >(0)),
 		constraint CK_SP_SLHC
 		check (soLuongHienCon>(0))
+--GioiTinh (Nam hoặc Nữ) – mặc định Nam.
+alter table NhanVien
+	add constraint CK_NV_GT
+	check(gioiTinh = N'Nữ' or GioiTinh = N'Nam'),
+	constraint DF_NV_GT default N'Nam' for gioiTinh
+
+alter table KhachHang
+	add constraint CK_KH_GT
+	check(gioiTinh = N'Nữ' or GioiTinh = N'Nam'),
+	constraint DF_KH_GT default N'Nam' for gioiTinh
+--chèn dữ liệu vào database
+----Bảng Khách Hàng
+insert into KhachHang(tenKH,diaChi,SDT,gioiTinh)
+	values
+		(N'Nguyễn Văn An',N'Đà Nẵng','0123456789',default),
+		(N'Lê Nhật Nam',N'Quảng Nam','0112345678',default),
+		(N'Nguyễn Thị Ngọc Lan',N'Quảng Nam','0124578945',N'Nữ'),
+		(N'Lê Văn Hùng',N'Huế','0233456789',default),
+		(N'Phạm Lan Nhi',N'Đà Nẵng','01234456789',N'Nữ'),
+		(N'Nguyễn Quốc Dũng',N'Quảng Trị','0123446789',default),
+		(N'Lê Hữu Nam',N'Đà Nẵng','0123455789',default),
+		(N'Nguyễn Long',N'Quảng Nam','0123456799',default),
+		(N'Phạm Ngọc Mai',N'Quảng Nam','0123456689',N'Nữ'),
+		(N'Lê Minh Đức',N'Đà Nẵng','0123456779',default)
+		--select * from KhachHang

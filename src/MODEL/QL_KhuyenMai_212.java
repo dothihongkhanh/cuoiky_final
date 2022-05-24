@@ -11,9 +11,8 @@ package MODEL;
 public class QL_KhuyenMai_212 {
 
     private int maKM_212;
-    private String tenChuongTrinh_212;
+    private String tenChuongTrinhKM_212;
     private String mucGiamGia_212;
-    private String sanPham_212;
     private String ngayBatDau_212;
     private String ngayKetThuc_212;
     private String moTa_212;
@@ -26,12 +25,12 @@ public class QL_KhuyenMai_212 {
         this.maKM_212 = maKM_212;
     }
 
-    public String getTenChuongTrinh_212() {
-        return tenChuongTrinh_212;
+    public String getTenChuongTrinhKM_212() {
+        return tenChuongTrinhKM_212;
     }
 
-    public void setTenChuongTrinh_212(String tenChuongTrinh_212) {
-        this.tenChuongTrinh_212 = tenChuongTrinh_212;
+    public void setTenChuongTrinhKM_212(String tenChuongTrinhKM_212) {
+        this.tenChuongTrinhKM_212 = tenChuongTrinhKM_212;
     }
 
     public String getMucGiamGia_212() {
@@ -40,14 +39,6 @@ public class QL_KhuyenMai_212 {
 
     public void setMucGiamGia_212(String mucGiamGia_212) {
         this.mucGiamGia_212 = mucGiamGia_212;
-    }
-
-    public String getSanPham_212() {
-        return sanPham_212;
-    }
-
-    public void setSanPham_212(String sanPham_212) {
-        this.sanPham_212 = sanPham_212;
     }
 
     public String getNgayBatDau_212() {
@@ -73,5 +64,7 @@ public class QL_KhuyenMai_212 {
     public void setMoTa_212(String moTa_212) {
         this.moTa_212 = moTa_212;
     }
+
+   
 
 }

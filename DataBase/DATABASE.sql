@@ -144,25 +144,26 @@ insert into NhanVien(tenNV,diaChi,SDT,vaiTro,ngaySinh,gioiTinh,email,trangThai)
 		(N'Trần Hoàng Mi',N'106 Ngô Quyền','0906325489',N'Nhân viên bán hàng','12/06/1970',N'Nữ','hoangmi@gmail.com',N'Đã nghỉ việc'),
 		(N'Thái Ánh Linh',N'25 Lý Tự Trọng','0256347852',N'Nhân viên bán hàng','16/04/1988',N'Nữ','anhlinh@gmail.com',N'Đang làm việc')
 		--select * from NhanVien
-go
+
 insert into SanPham(tenSP,donGiaBan,soLuongHienCon) 
-			values (N'Samsung Galaxy S22 Ultra 5G','30.990.000đ','30'),
-					(N'iPhone 11','12.490.000đ','40'),
-					(N'OPPO Ren7 series','10.490.000đ','35'),
-					(N'iPhone 13 Pro','27.490.000đ','20'),
-					(N'iphone 12 Pro','26.290.000đ','26'),
-					(N'Bàn phím có dây Gaming Asus TUF K1','990.000đ','30'),
-					(N'Chuột không dây Gaming Asus TUF M4 WL','1.190.000đ','34'),
-					(N'Chuột có dây Gaming Asus Keris','1.250.000đ','20'),
-					(N'Bàn phím có dây DareU EK87 ','649.000đ','30'),
-					(N'Bàn phím cơ có dây Gaming Razer BlackWidow','2.880.000đ','15'),
-					(N'Chuột không dây Rapoo M20 Plus Đen','200.000đ','30'),
-					(N'Cáp Type C- Lightning Apple MM0A3','501.000đ','60'),
-					(N'Sạc Hydrus CS-TC027','60.000đ','40'),
-					(N'Cáp Type C Xmobile MU09-1000X','75.000đ','40'),
-					(N'Đế sạc không dây Mbest AC63F3','1750.000đ','25'),
-					(N'Tai nghe Bluetooth AirPods 2 Wireless charge Apple MRXJ2','5.590.000đ','40'),
-					(N'Tai nghe Bluetooth AirPods 3 Apple MME73','5.490.000đ','30'),
-					(N'Tai nghe có dây Mozard DS510-WB','120.000đ','30'),
-					(N'Tai nghe Bluetooth Chụp Tai Kanen K6','600.000đ','26'),
-					(N'Tai nghe EP Gaming Asus Rog Cetra II Core','1.290.000đ','20')
+			values 
+					(N'Samsung Galaxy S22 Ultra 5G',30990000,'30'),
+					(N'iPhone 11',12490000,'40'),
+					(N'OPPO Ren7 series',10490000,'35'),
+					(N'iPhone 13 Pro',27490000,'20'),
+					(N'iphone 12 Pro',26290000,'26'),
+					(N'Bàn phím có dây Gaming Asus TUF K1',990000,'30'),
+					(N'Chuột không dây Gaming Asus TUF M4 WL',1190000,'34'),
+					(N'Chuột có dây Gaming Asus Keris',1250000,'20'),
+					(N'Bàn phím có dây DareU EK87 ',649000,'30'),
+					(N'Bàn phím cơ có dây Gaming Razer BlackWidow',2880000,'15'),
+					(N'Chuột không dây Rapoo M20 Plus Đen',200000,'30'),
+					(N'Cáp Type C- Lightning Apple MM0A3',501000,'60'),
+					(N'Sạc Hydrus CS-TC027',60000,'40'),
+					(N'Cáp Type C Xmobile MU09-1000X',75000,'40'),
+					(N'Đế sạc không dây Mbest AC63F3',1750000,'25'),
+					(N'Tai nghe Bluetooth AirPods 2 Apple MRXJ2',5590000,'40'),
+					(N'Tai nghe Bluetooth AirPods 3 Apple MME73',5490000,'30'),
+					(N'Tai nghe có dây Mozard DS510-WB',120000,'30'),
+					(N'Tai nghe Bluetooth Chụp Tai Kanen K6',600000,'26'),
+					(N'Tai nghe EP Gaming Asus Rog Cetra II Core',1290000,'20')

@@ -16,7 +16,10 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -72,37 +75,42 @@ public class ChuyenManHinhController {
 
         @Override
         public void mouseClicked(MouseEvent e) {
-            switch (kind) {
-                
-                case "TrangChu":
-                    node = new TrangChu_JPanelForm();
-                    break;
-                case "QuanLySanPham":
-                    node = new QL_SanPham_JPanelForm();
-                    break;
-                case "QuanLyKhuyenMai":
-                    node = new QL_KhuyenMai_JPanelForm();
-                    break;
-                case "QuanLyNhanVien":
-                    node = new QL_NhanVien_JPanelForm();
-                    break;
-                case "QuanLyKhachHang":
-                    node = new QL_KhachHang_JPanelForm();
-                    break;
-                case "QuanLyHoaDon":
-                    node = new QL_HoaDon_JPanelForm();
-                    break;
-                 case "ThongKe":
-                    node = new ThongKe_JPanelFrom();
-                    break;
-
+            try {
+                switch (kind) {
+                    
+                    case "TrangChu":
+                        node = new TrangChu_JPanelForm();
+                        break;
+                    case "QuanLySanPham":
+                        node = new QL_SanPham_JPanelForm();
+                        break;
+                    case "QuanLyKhuyenMai":
+                        node = new QL_KhuyenMai_JPanelForm();
+                        break;
+                    case "QuanLyNhanVien":
+                        node = new QL_NhanVien_JPanelForm();
+                        break;
+                    case "QuanLyKhachHang":
+                        node = new QL_KhachHang_JPanelForm();
+                        break;
+                        
+                    case "QuanLyHoaDon":
+                        node = new QL_HoaDon_JPanelForm();
+                        break;
+                    case "ThongKe":
+                        node = new ThongKe_JPanelFrom();
+                        break;
+                        
+                }
+                root.removeAll();
+                root.setLayout(new BorderLayout());
+                root.add(node);
+                root.validate();
+                root.repaint();
+                setChangeBackground(kind);
+            } catch (SQLException ex) {
+                Logger.getLogger(ChuyenManHinhController.class.getName()).log(Level.SEVERE, null, ex);
             }
-            root.removeAll();
-            root.setLayout(new BorderLayout());
-            root.add(node);
-            root.validate();
-            root.repaint();
-            setChangeBackground(kind);
         }
 
         @Override

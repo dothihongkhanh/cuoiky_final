@@ -52,7 +52,6 @@ create table KhuyenMai
 (
 	maKM int not null primary key identity(1,1),
 	tenCTKM nvarchar(50) not null,
-	mucGiamGia int not null,
 	ngayBatDau date ,
 	ngayKetThuc date,
 	moTa nvarchar(50),
@@ -113,6 +112,9 @@ alter table KhachHang
 	add constraint CK_KH_GT
 	check(gioiTinh = N'Nữ' or GioiTinh = N'Nam'),
 	constraint DF_KH_GT default N'Nam' for gioiTinh
+alter table KhuyenMai
+	add constraint CK_KM_Date
+	check (ngayBatDau<ngayKetThuc)
 --chèn dữ liệu vào database
 ----Bảng Khách Hàng
 insert into KhachHang(tenKH,diaChi,SDT,gioiTinh)
@@ -167,3 +169,25 @@ insert into SanPham(tenSP,donGiaBan,soLuongHienCon)
 					(N'Tai nghe có dây Mozard DS510-WB',120000,'30'),
 					(N'Tai nghe Bluetooth Chụp Tai Kanen K6',600000,'26'),
 					(N'Tai nghe EP Gaming Asus Rog Cetra II Core',1290000,'20')
+insert into KhuyenMai(tenCTKM,ngayBatDau,ngayKetThuc,moTa)
+			values
+			('chương trình khuyễn mãi ngày valentine','11/02/2022','16/2/2022',null),
+			('chương trình khuyễn mãi tháng 3','1/3/2022','31/03/2022',null),
+			('chương trình khuyễn mãi tháng 4','1/4/2022','30/4/2022',null),
+			('chương trình khuyễn mãi tháng 5','1/5/2022','31/5/2022',null),
+			('chương trình khuyễn mãi quốc tế thiếu nhi','31/5/2022','2/6/2022',null),
+			('chương trình khuyễn mãi tháng 6','1/6/2022','30/06/2022',null)
+insert into SanPhamKM(maKM,maSP,giaTriGiam)
+			values
+			 (1,1,20),
+			 (5,1,10),
+			 (4,4,5),
+			 (2,4,15),
+			 (5,5,30),
+			 (4,6,20),
+			 (3,7,10),
+			 (5,7,20),
+			 (5,8,25),
+			 (6,10,10)
+
+

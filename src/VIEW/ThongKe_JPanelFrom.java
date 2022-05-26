@@ -151,7 +151,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "mã sản phẩm", "Tên sản phẩm", "Số lượng còn", "Ðã Bán"
             }
         ));
         jScrollPane1.setViewportView(hangDaBan);
@@ -163,10 +163,10 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
             .addGroup(daBanLayout.createSequentialGroup()
                 .addGap(159, 159, 159)
                 .addComponent(jLabel5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(202, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, daBanLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 527, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE)
                 .addContainerGap())
         );
         daBanLayout.setVerticalGroup(
@@ -174,7 +174,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
             .addGroup(daBanLayout.createSequentialGroup()
                 .addGap(11, 11, 11)
                 .addComponent(jLabel5)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );

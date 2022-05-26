@@ -48,7 +48,7 @@ go
  create table HoaDon
  (
 	maDH int not null primary key identity(1,1),
-	tenSP nvarchar(50) not null,
+	ngayTaoDH date,
 	diaChiGiaoHang nvarchar(80) not null,
 	phuongThucThanhToan nvarchar(30) not null,
 	thoiGianThanhToan date,

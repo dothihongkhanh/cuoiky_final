@@ -70,7 +70,7 @@ create table ChiTietHoaDon(
 	constraint FK_CTHD_MSP foreign key (maSP) references SanPham (maSP),
 	constraint FK_CTHD_MDH foreign key (maDH) references HoaDon(maDH),
 )
-
+go
 --TAO RANG BUOC
 --Email: có chứa @, bắt đầu là chữ cái viết thường hoặc viết hoa (thuộc 1 trong 3 dịch vụ mail: Gmail hoặc Yahoo Mail hoặc ute.udn.vn mail); và phải là duy nhất
 alter table NhanVien
@@ -113,6 +113,13 @@ alter table KhachHang
 alter table KhuyenMai
 	add constraint CK_KM_Date
 	check (ngayBatDau<ngayKetThuc)
+alter table HoaDon
+	--tạo đơn đặt hàng nhỏ hơn ngày hiện tại
+	add	constraint CK_DDHHD_nTDH
+		check (ngayTaoDH < getdate()),	
+	--ngày giao hàng nhỏ hơn ngày hiện tại và lớn hơn ngày tạo ĐH
+		constraint CK_DDHHD_nGH
+			check ( thoiGianGiaoHang >ngayTaoDH and thoiGianGiaoHang<getdate() )
 --chèn dữ liệu vào database
 ----Bảng Khách Hàng
 insert into KhachHang(tenKH,diaChi,SDT,gioiTinh)
@@ -177,7 +184,7 @@ insert into KhuyenMai(tenCTKM, mucGiamGia, ngayBatDau,ngayKetThuc,moTa)
 		(N'Kỉ niệm 5 năm thành lập',20, '25/05/2022', '10/06/2022',null),
 		(N'Giảm giá cuối tuần',5, '28/05/2022', '03/06/2022',null),
 		(N'Noel',5, '20/11/2021', '30/12/2021',null)
-		--select * from KhuyenMai
+		--select * from KhuyenMai 
 
 					   			 		  			
 

@@ -30,7 +30,7 @@ public class QLKhuyenMai_Dao {
             while (rs.next()) {
                 QL_KhuyenMai_212 km = new QL_KhuyenMai_212();
                 km.setMaKM_212(rs.getInt("MAKM"));
-                km.setTenChuongTrinhKM_212(rs.getString("TENCHUONGTRINH"));
+                km.setTenChuongTrinhKM_212(rs.getString("TENCTKM"));
                 km.setMucGiamGia_212(rs.getString("MUCGIAMGIA"));
                 km.setNgayBatDau_212(rs.getString("NGAYBATDAU"));
                 km.setNgayKetThuc_212(rs.getString("NGAYKETTHUC"));
@@ -48,7 +48,7 @@ public class QLKhuyenMai_Dao {
 
     public void addKM(QL_KhuyenMai_212 km) throws SQLException {
         Connection con = ConnectDB.getJBDCConnection();
-        String sql = "INSERT INTO KhuyenMai ( TENCHUONGTRINH, MUCGIAMGIA, NGAYBATDAU, NGAYKETTHUC, MOTA) VALUES(?,?,?,?,?)";
+        String sql = "INSERT INTO KhuyenMai ( tenCTKM , MUCGIAMGIA, NGAYBATDAU, NGAYKETTHUC, MOTA) VALUES(?,?,?,?,?)";
         try {
             PreparedStatement pstmt = con.prepareStatement(sql);
             pstmt.setString(1, km.getTenChuongTrinhKM_212());

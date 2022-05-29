@@ -4,8 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/KLN_QUANLIBANTHIETBICONGNGHE/src/DAO/QLKhuyenMai_Dao.java</file>
+            <file>file:/D:/KLN_QUANLIBANTHIETBICONGNGHE/src/VIEW/QL_KhachHang_JPanelForm.java</file>
             <file>file:/D:/KLN_QUANLIBANTHIETBICONGNGHE/src/SERVICE/QLKhachHang_Service.java</file>
+            <file>file:/D:/KLN_QUANLIBANTHIETBICONGNGHE/src/VIEW/QL_KhuyenMai_JPanelForm.java</file>
             <file>file:/D:/KLN_QUANLIBANTHIETBICONGNGHE/src/SERVICE/QLKhuyenMai_Service.java</file>
+            <file>file:/D:/KLN_QUANLIBANTHIETBICONGNGHE/src/MODEL/QL_KhuyenMai_212.java</file>
+            <file>file:/D:/KLN_QUANLIBANTHIETBICONGNGHE/src/VIEW/QL_HoaDon_JPanelForm.java</file>
         </group>
     </open-files>
 </project-private>

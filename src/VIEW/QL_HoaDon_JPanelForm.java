@@ -151,7 +151,7 @@ public class QL_HoaDon_JPanelForm extends javax.swing.JPanel {
 
         lblPhuongThucThanhToan_229.setText("Phương thức thanh toán :");
 
-        cmbPhuongThucThanhToan_229.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tiền mặt", "Thẻ tín dụng" }));
+        cmbPhuongThucThanhToan_229.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tiền mặt", "Thẻ ngân hàng" }));
 
         lblThoiGianThanhToan_229.setText("Thời gian thanh toán");
 

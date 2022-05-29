@@ -1,7 +1,7 @@
 ﻿create database QUANLITHIETBICONGNGHE_KLN
 go
 use QUANLITHIETBICONGNGHE_KLN
-GO 
+go 
 create table KhachHang
 (
 	maKH int  primary key not null identity(1,1),
@@ -117,9 +117,9 @@ alter table HoaDon
 	--tạo đơn đặt hàng nhỏ hơn ngày hiện tại
 	add	constraint CK_DDHHD_nTDH
 		check (ngayTaoDH < getdate()),	
-	--ngày giao hàng nhỏ hơn ngày hiện tại và lớn hơn ngày tạo ĐH
+	--ngày giao hàng nhỏ hơn ngày hiện tại 
 		constraint CK_DDHHD_nGH
-			check ( thoiGianGiaoHang >ngayTaoDH and thoiGianGiaoHang<getdate() )
+			check (thoiGianGiaoHang<getdate())
 --chèn dữ liệu vào database
 ----Bảng Khách Hàng
 insert into KhachHang(tenKH,diaChi,SDT,gioiTinh)
@@ -185,6 +185,33 @@ insert into KhuyenMai(tenCTKM, mucGiamGia, ngayBatDau,ngayKetThuc,moTa)
 		(N'Giảm giá cuối tuần',5, '28/05/2022', '03/06/2022',null),
 		(N'Noel',5, '20/11/2021', '30/12/2021',null)
 		--select * from KhuyenMai 
+-- chèn dữ liệu vào bảng Hóa đơn 
+go 
+insert into HoaDon (ngayTaoDH,diaChiGiaoHang,phuongThucThanhToan,thoiGianThanhToan,thoiGianGiaoHang,maKH,maNV,maKM)
+values ('1/5/2022',N'Ông Ích Khiêm, Đà Nẵng',N'Tiền mặt','2/5/2022','2/5/2022',1,2,1),
+		('2/5/2022',N'Ông Ích Khiêm, Đà Nẵng',N'Thẻ ngân hàng','2/5/2022','2/5/2022',5,3,1),
+		('3/5/2022',N'48 Cao Thắng, Đà Nẵng',N'Tiền mặt','3/5/2022','3/5/2022',7,6,1),
+		('3/5/2022',N'Đống Đa, Đà Nẵng',N'Thẻ ngân hàng','4/5/2022','4/5/2022',10,5,1),
+		('4/5/2022',N'Lý Tự Trọng, Đà Nẵng',N'Tiền mặt','4/5/2022','4/5/2022',1,9,1),
+		('4/5/2022',N'Ông Ích Khiêm, Đà Nẵng',N'Tiền mặt','5/5/2022','5/5/2022',5,10,1),
+		('4/5/2022',N'Hoàng Diệu, Đà Nẵng',N'Tiền mặt','4/5/2022','5/5/2022',7,2,1),
+		('28/5/2022',N'48 Cao Thắng, Đà Nẵng',N'Thẻ ngân hàng','28/5/2022','28/5/2022',10,3,4),
+		('28/5/2022',N'Lê Duẩn, Đà Nẵng',N'Tiền mặt','28/5/2022','28/5/2022',5,6,4),
+		('28/5/2022',N'Điện Biên Phủ, Đà Nẵng',N'Tiền mặt','28/5/2022','28/5/2022',1,5,4);
+go 
+insert into ChiTietHoaDon 
+values	(3,2,2),
+		(4,3,1),
+		(5,3,2),
+		(6,7,3),
+		(7,8,1),
+		(8,9,3),
+		(8,15,1),
+		(9,19,3),
+		(10,4,1),
+		(10,6,2);
+
+	
 
 					   			 		  			
 

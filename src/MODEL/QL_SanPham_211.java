@@ -12,8 +12,7 @@ package MODEL;
 public class QL_SanPham_211 {
      private int maSP_211;
     private String tenSP_211;
-    private String gia_211;
-    private String donvitinh_211;
+    private String donGiaBan_211;
     private String soLuongHienCon_211;
 
  public int getMaSP_211() {
@@ -32,27 +31,20 @@ public class QL_SanPham_211 {
         this.tenSP_211 = tenSP_211;
     }
 
-    public String getGia_211() {
-        return gia_211;
+    public String getDonGiaBan_211() {
+        return donGiaBan_211;
     }
 
-    public void setGia_211(String Gia_211) {
-        this.gia_211 = gia_211;
-    }
-
-    public String getDơnvitinh_211() {
-        return donvitinh_211;
-    }
-
-    public void setDonvitinh_211(String Donvitinh_211) {
-        this.donvitinh_211 = donvitinh_211;
+    public void setDonGiaBan_211(String DonGiaBan_211) {
+        this.donGiaBan_211 = donGiaBan_211;
     }
 
     public String getSoLuongHienCon_211(String soLuongHienCon_211) {
         return soLuongHienCon_211;
     }
 
-    public void setSoLuongHienCon_211(String soLuongHienCon_211) {
+    public void setSoLuongHienCon_211(String SoLuongHienCon_211) {
         this.soLuongHienCon_211 = soLuongHienCon_211;
     }
+
 }

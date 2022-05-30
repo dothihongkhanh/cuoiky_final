@@ -155,26 +155,26 @@ insert into NhanVien(tenNV,diaChi,SDT,vaiTro,ngaySinh,gioiTinh,email,trangThai)
 --Bang SanPham
 insert into SanPham(tenSP,donGiaBan,soLuongHienCon) 
 	values 
-		(N'Samsung Galaxy S22 Ultra 5G',30990000,'30'),
-		(N'iPhone 11',12490000,'40'),
-		(N'OPPO Ren7 series',10490000,'35'),
-		(N'iPhone 13 Pro',27490000,'20'),
-		(N'iphone 12 Pro',26290000,'26'),
-		(N'Bàn phím có dây Gaming Asus TUF K1',990000,'30'),
-		(N'Chuột không dây Gaming Asus TUF M4 WL',1190000,'34'),
-		(N'Chuột có dây Gaming Asus Keris',1250000,'20'),
-		(N'Bàn phím có dây DareU EK87 ',649000,'30'),
-		(N'Bàn phím cơ có dây Gaming Razer BlackWidow',2880000,'15'),
-		(N'Chuột không dây Rapoo M20 Plus Đen',200000,'30'),
-		(N'Cáp Type C- Lightning Apple MM0A3',501000,'60'),
-		(N'Sạc Hydrus CS-TC027',60000,'40'),
-		(N'Cáp Type C Xmobile MU09-1000X',75000,'40'),
-		(N'Đế sạc không dây Mbest AC63F3',1750000,'25'),
-		(N'Tai nghe Bluetooth AirPods 2 Apple MRXJ2',5590000,'40'),
-		(N'Tai nghe Bluetooth AirPods 3 Apple MME73',5490000,'30'),
-		(N'Tai nghe có dây Mozard DS510-WB',120000,'30'),
-		(N'Tai nghe Bluetooth Chụp Tai Kanen K6',600000,'26'),
-		(N'Tai nghe EP Gaming Asus Rog Cetra II Core',1290000,'20')
+		(N'Samsung Galaxy S22 Ultra 5G',30990000,30),
+		(N'iPhone 11',12490000,40),
+		(N'OPPO Ren7 series',10490000,35),
+		(N'iPhone 13 Pro',27490000,20),
+		(N'iphone 12 Pro',26290000,26),
+		(N'Bàn phím có dây Gaming Asus TUF K1',990000,30),
+		(N'Chuột không dây Gaming Asus TUF M4 WL',1190000,34),
+		(N'Chuột có dây Gaming Asus Keris',1250000,20),
+		(N'Bàn phím có dây DareU EK87 ',649000,30),
+		(N'Bàn phím cơ có dây Gaming Razer BlackWidow',2880000,15),
+		(N'Chuột không dây Rapoo M20 Plus Đen',200000,30),
+		(N'Cáp Type C- Lightning Apple MM0A3',501000,60),
+		(N'Sạc Hydrus CS-TC027',60000,40),
+		(N'Cáp Type C Xmobile MU09-1000X',75000,40),
+		(N'Đế sạc không dây Mbest AC63F3',1750000,25),
+		(N'Tai nghe Bluetooth AirPods 2 Apple MRXJ2',5590000,40),
+		(N'Tai nghe Bluetooth AirPods 3 Apple MME73',5490000,30),
+		(N'Tai nghe có dây Mozard DS510-WB',120000,30),
+		(N'Tai nghe Bluetooth Chụp Tai Kanen K6',600000,26),
+		(N'Tai nghe EP Gaming Asus Rog Cetra II Core',1290000,20)
 					--select * from SanPham
 --Bang KhuyenMai
 insert into KhuyenMai(tenCTKM, mucGiamGia, ngayBatDau,ngayKetThuc,moTa)

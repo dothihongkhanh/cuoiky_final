@@ -31,11 +31,11 @@ public class QLSanPham_Dao {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                QL_SanPham_211 kh = new QL_SanPham_211();
-                kh.setMaSP_211(rs.getInt("MASP"));
-                kh.settenSP_211(rs.getString("TENSP"));
-                kh.setdongiaban_211(rs.getString("DONGIABAN"));
-                kh.setsoluonghiencon_211(rs.getString("SOLUONGHIENCON"));
+                QL_SanPham_211 sp = new QL_SanPham_211();
+                sp.setMaSP_211(rs.getInt("MASP"));
+                sp.setTenSP_211(rs.getString("TENSP"));
+                sp.setDonGiaBan_211(rs.getString("DONGIABAN"));
+                sp.setSoLuongHienCon_211(rs.getString("SOLUONGHIENCON"));
                 
                  sanpham.add(sp);
 
@@ -52,9 +52,9 @@ public class QLSanPham_Dao {
         String sql = "INSERT INTO SanPham ( TENSP, DONGIABAN, SOLUONGHIENCON) VALUES(?,?,?)";
         try {
             PreparedStatement pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, phong.gettenSP_211());
-            pstmt.setString(2, phong.getdongiaban_211());
-            pstmt.setString(3, phong.getsoluonghiencon_211());
+            pstmt.setString(1, phong.getTenSP_211());
+            pstmt.setString(2, phong.getDonGiaBan_211());
+           
                       
 
             int rs = pstmt.executeUpdate();
@@ -65,14 +65,14 @@ public class QLSanPham_Dao {
             e.printStackTrace();
         }
     }
-     public void updateKH(QL_SanPham_211 kh) throws SQLException {
+     public void updateSP(QL_SanPham_211 sp) throws SQLException {
         Connection connection = ConnectDB.getJBDCConnection();
-        String sql = "UPDATE SanPham SET TENSP = ?, DONGIABAN = ?, SOLUONGHIENCON = ? WHERE MASP =?";
+        String sql = "UPDATE SanPham SET TENSP = ?, DONGIABAN = ? WHERE MASP =?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, kh.gettenSP_211());
-            preparedStatement.setString(2, kh.getdongiaban_211());
-            preparedStatement.setString(3, kh.getsoluonghiencon_211());
+            preparedStatement.setString(1, sp.getTenSP_211());
+            preparedStatement.setString(2, sp.getDonGiaBan_211());
+           
            
             
             int rs = preparedStatement.executeUpdate();

@@ -11,48 +11,30 @@ package MODEL;
  */
 public class QL_HoaDon_229 {
 
-    int maHD;
-    String tenSP;
-    private int soLuongDat_229;
-    private String thoiGianBaoHanh_229;
+    private int maDH_229;
+    private  String ngayTaoDH_229;
     private String diaChiGiaoHang_229;
-    private String phuongThucThanhToan_229;
-    private String thoiGianGiaoHang_229;
-    private Double thanhTien_229;
+    private String  phuongThucThanhToan_229;
+    private String  thoiGianThanhToan_229;
+    private String  thoiGianGiaoHang_229;
+    private String  maKH_229;
+    private String  maNV_229;
+    private String maKM_229;
 
-    public QL_HoaDon_229() {
+    public int getMaDH_229() {
+        return maDH_229;
     }
 
-    public int getMaHD() {
-        return maHD;
+    public void setMaDH_229(int maDH_229) {
+        this.maDH_229 = maDH_229;
     }
 
-    public void setMaHD(int maHD) {
-        this.maHD = maHD;
+    public String getNgayTaoDH_229() {
+        return ngayTaoDH_229;
     }
 
-    public String getTenSP() {
-        return tenSP;
-    }
-
-    public void setTenSP(String tenSP) {
-        this.tenSP = tenSP;
-    }
-
-    public int getSoLuongDat_229() {
-        return soLuongDat_229;
-    }
-
-    public void setSoLuongDat_229(int soLuongDat_229) {
-        this.soLuongDat_229 = soLuongDat_229;
-    }
-
-    public String getThoiGianBaoHanh_229() {
-        return thoiGianBaoHanh_229;
-    }
-
-    public void setThoiGianBaoHanh_229(String thoiGianBaoHanh_229) {
-        this.thoiGianBaoHanh_229 = thoiGianBaoHanh_229;
+    public void setNgayTaoDH_229(String ngayTaoDH_229) {
+        this.ngayTaoDH_229 = ngayTaoDH_229;
     }
 
     public String getDiaChiGiaoHang_229() {
@@ -71,6 +53,14 @@ public class QL_HoaDon_229 {
         this.phuongThucThanhToan_229 = phuongThucThanhToan_229;
     }
 
+    public String getThoiGianThanhToan_229() {
+        return thoiGianThanhToan_229;
+    }
+
+    public void setThoiGianThanhToan_229(String thoiGianThanhToan_229) {
+        this.thoiGianThanhToan_229 = thoiGianThanhToan_229;
+    }
+
     public String getThoiGianGiaoHang_229() {
         return thoiGianGiaoHang_229;
     }
@@ -79,12 +69,29 @@ public class QL_HoaDon_229 {
         this.thoiGianGiaoHang_229 = thoiGianGiaoHang_229;
     }
 
-    public Double getThanhTien_229() {
-        return thanhTien_229;
+    public String getMaKH_229() {
+        return maKH_229;
     }
 
-    public void setThanhTien_229(Double thanhTien_229) {
-        this.thanhTien_229 = thanhTien_229;
+    public void setMaKH_229(String maKH_229) {
+        this.maKH_229 = maKH_229;
     }
 
+    public String getMaNV_229() {
+        return maNV_229;
+    }
+
+    public void setMaNV_229(String maNV_229) {
+        this.maNV_229 = maNV_229;
+    }
+
+    public String getMaKM_229() {
+        return maKM_229;
+    }
+
+    public void setMaKM_229(String maKM_229) {
+        this.maKM_229 = maKM_229;
+    }
+
+    
 }

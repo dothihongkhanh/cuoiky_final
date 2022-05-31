@@ -4,6 +4,12 @@
  */
 package VIEW;
 
+import MODEL.QL_SanPhamDaBan_203;
+import SERVICE.QLThongKe_Service;
+import java.sql.SQLException;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author phank
@@ -13,9 +19,36 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
     /**
      * Creates new form ThongKe
      */
-    public ThongKe_JPanelFrom() {
+   DefaultTableModel defaultTableModel;
+    QLThongKe_Service qLThongKe_Service;
+    QL_SanPhamDaBan_203 qL_SanPhamDaBan_203;
+     
+    public ThongKe_JPanelFrom() throws SQLException {
         initComponents();
+        qLThongKe_Service = new QLThongKe_Service();
+        qL_SanPhamDaBan_203 = new QL_SanPhamDaBan_203();
+        defaultTableModel = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+
+        };
+        hangDaBan.setModel(defaultTableModel);
+        
+        defaultTableModel.addColumn("Mã đơn hàng");
+        defaultTableModel.addColumn("Mã sản phẩm");
+        defaultTableModel.addColumn("Tên sản phẩm");
+        defaultTableModel.addColumn("Số lượng đã bán");
+        setTableData(qLThongKe_Service.getAllL_SanPhamDaBan());
     }
+ private void setTableData(List<QL_SanPhamDaBan_203> SanPhamDaBan) {
+        
+     for(QL_SanPhamDaBan_203 sanPhan : SanPhamDaBan){
+         defaultTableModel.addRow(new Object[]{sanPhan.getMaSP_203(), sanPhan.getTenSP_203(), sanPhan.getSoLuongCon_203(), sanPhan.getSoLuongDaBan_203()});
+
+     }
+ }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -141,7 +174,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel5.setText("Danh Sách Hàng Ðã Bán");
+        jLabel5.setText("Danh Sách Đơn Hàng Ðã Bán");
 
         hangDaBan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -163,7 +196,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
             .addGroup(daBanLayout.createSequentialGroup()
                 .addGap(159, 159, 159)
                 .addComponent(jLabel5)
-                .addContainerGap(202, Short.MAX_VALUE))
+                .addContainerGap(162, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, daBanLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE)

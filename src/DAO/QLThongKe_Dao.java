@@ -30,10 +30,10 @@ public class QLThongKe_Dao {
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
                 QL_SanPhamDaBan_203 qL_SanPhamDaBan = new QL_SanPhamDaBan_203();
-                qL_SanPhamDaBan.setMaSP(rs.getInt(1));
-                qL_SanPhamDaBan.setTenSP(rs.getString(2));
-                qL_SanPhamDaBan.setSoLuongCon(rs.getInt(3));
-                qL_SanPhamDaBan.setSoLuongDaBan(rs.getInt(4));
+                qL_SanPhamDaBan.setMaSP_203(rs.getInt(1));
+                qL_SanPhamDaBan.setTenSP_203(rs.getString(2));
+                qL_SanPhamDaBan.setSoLuongCon_203(rs.getInt(3));
+                qL_SanPhamDaBan.setSoLuongDaBan_203(rs.getInt(4));
                 QL_SanPhamDaBans.add(qL_SanPhamDaBan);
             }
             return QL_SanPhamDaBans;

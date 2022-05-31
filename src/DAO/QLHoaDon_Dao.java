@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class QLHoaDon_Dao {
     public List<QL_HoaDon_229> getAllUsers() throws SQLException {
-        List<QL_HoaDon_229> khachhang = new ArrayList<QL_HoaDon_229>();
+        List<QL_HoaDon_229> hoadon = new ArrayList<QL_HoaDon_229>();
 
         Connection connection = ConnectDB.getJBDCConnection();
 
@@ -29,30 +29,30 @@ public class QLHoaDon_Dao {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                QL_HoaDon_229 kh = new QL_HoaDon_229();
-                kh.setMaDH_229(rs.getInt("MADH"));
-                kh.setNgayTaoDH_229(rs.getString("NGAYTAODONHANG"));
-                kh.setDiaChiGiaoHang_229(rs.getString("DIACHIGIAOHANG"));
-                kh.setPhuongThucThanhToan_229(rs.getString("PHUONGTHUCTHANHTOAN"));
-                kh.setThoiGianThanhToan_229(rs.getString("THOIGIANTHANHTOAN"));
-                kh.setThoiGianGiaoHang_229(rs.getString("THOIGIANGIAOHANG"));
-                kh.setMaKH_229(rs.getString("MAKH"));
-                kh.setMaNV_229(rs.getString("MANV"));
-                kh.setMaKM_229(rs.getString("MAKM"));
+                QL_HoaDon_229 hd = new QL_HoaDon_229();
+                hd.setMaDH_229(rs.getInt("MADH"));
+                hd.setNgayTaoDH_229(rs.getString("NGAYTAODH"));
+                hd.setDiaChiGiaoHang_229(rs.getString("DIACHIGIAOHANG"));
+                hd.setPhuongThucThanhToan_229(rs.getString("PHUONGTHUCTHANHTOAN"));
+                hd.setThoiGianThanhToan_229(rs.getString("THOIGIANTHANHTOAN"));
+                hd.setThoiGianGiaoHang_229(rs.getString("THOIGIANGIAOHANG"));
+                hd.setMaKH_229(rs.getString("MAKH"));
+                hd.setMaNV_229(rs.getString("MANV"));
+                hd.setMaKM_229(rs.getString("MAKM"));
               
-                khachhang.add(kh);
+                hoadon.add(hd);
 
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return khachhang;
+        return hoadon;
 
     }
 
     public void addDH(QL_HoaDon_229 phong) throws SQLException {
         Connection con = ConnectDB.getJBDCConnection();
-        String sql = "INSERT INTO KhachHang ( TENKH, DIACHI, SDT, GIOITINH) VALUES(?,?,?,?)";
+        String sql = "INSERT INTO HoaDon ( NGAYTAODH, DIACHIGIAOHANG, PHUONGTHUCTHANHTOAN, THOIGIANTHANHTOAN, MAKH, MANV, MAKM) VALUES(?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement pstmt = con.prepareStatement(sql);
             pstmt.setString(1, phong.getNgayTaoDH_229());
@@ -72,19 +72,19 @@ public class QLHoaDon_Dao {
             e.printStackTrace();
         }
     }
-     public void updateDH(QL_HoaDon_229 dh) throws SQLException {
+     public void updateDH(QL_HoaDon_229 hd) throws SQLException {
         Connection connection = ConnectDB.getJBDCConnection();
-        String sql = "UPDATE KhachHang SET TENKH = ?, DIACHI = ?, SDT = ?,GIOITINH = ? WHERE MAKH =?";
+        String sql = "UPDATE HoaDon SET NGAYTAODH = ?, DIACHIGIAOHANG = ?, PHUONGTHUCTHANHTOAN = ?,THOIGIANTHANHTOAN = ?, MAKH =?, MANV =?,MAKM =?  WHERE MADH =?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, dh.getNgayTaoDH_229());
-            preparedStatement.setString(2, dh.getDiaChiGiaoHang_229());
-            preparedStatement.setString(3, dh.getPhuongThucThanhToan_229());
-            preparedStatement.setString(4, dh.getThoiGianThanhToan_229());
-            preparedStatement.setString(5, dh.getThoiGianGiaoHang_229());
-            preparedStatement.setString(6, dh.getMaKH_229());
-            preparedStatement.setString(7, dh.getMaNV_229());
-            preparedStatement.setString(8, dh.getMaKM_229());
+            preparedStatement.setString(1, hd.getNgayTaoDH_229());
+            preparedStatement.setString(2, hd.getDiaChiGiaoHang_229());
+            preparedStatement.setString(3, hd.getPhuongThucThanhToan_229());
+            preparedStatement.setString(4, hd.getThoiGianThanhToan_229());
+            preparedStatement.setString(5, hd.getThoiGianGiaoHang_229());
+            preparedStatement.setString(6, hd.getMaKH_229());
+            preparedStatement.setString(7, hd.getMaNV_229());
+            preparedStatement.setString(8, hd.getMaKM_229());
             
             int rs = preparedStatement.executeUpdate();
             System.out.println(rs);

@@ -4,17 +4,56 @@
  */
 package VIEW;
 
+import MODEL.QL_HoaDon_229;
+import SERVICE.QLHoaDon_Service;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author DELL
  */
 public class QL_HoaDon_JPanelForm extends javax.swing.JPanel {
 
-    /**
-     * Creates new form QL_HoaDon_JPanelForm
-     */
-    public QL_HoaDon_JPanelForm() {
+    private List<QL_HoaDon_229> list = new ArrayList<>();
+    DefaultTableModel defaultTableModel;
+    QLHoaDon_Service dhService;
+    QL_HoaDon_229 dh;
+    public QL_HoaDon_JPanelForm() throws SQLException {
         initComponents();
+        dhService = new QLHoaDon_Service();
+        dh = new QL_HoaDon_229();
+
+        defaultTableModel = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+
+        };
+        tblTTDonDatHang_229.setModel(defaultTableModel);
+
+        defaultTableModel.addColumn("MaDH");
+        defaultTableModel.addColumn("NgayTaoDH");
+        defaultTableModel.addColumn("DiaChiGiaoHang");
+        defaultTableModel.addColumn("PhươngThucThanhToan");
+        defaultTableModel.addColumn("ThoiGianGiaoHang");
+        defaultTableModel.addColumn("ThoiGianThanhToan");
+        defaultTableModel.addColumn("maKH");
+        defaultTableModel.addColumn("maNV");
+        defaultTableModel.addColumn("maKM");
+        
+        setTableData(dhService.getAllUsers());
+
+    }
+
+    private void setTableData(List<QL_HoaDon_229> hoadon) {
+        for (QL_HoaDon_229 hd : hoadon) {
+            defaultTableModel.addRow(new Object[]{hd.getMaDH_229(), hd.getNgayTaoDH_229(),hd.getDiaChiGiaoHang_229(), hd.getPhuongThucThanhToan_229(), hd.getThoiGianThanhToan_229(), hd.getThoiGianGiaoHang_229(),hd.getMaKH_229(),hd.getMaNV_229(),hd.getMaKM_229()});
+
+        }
     }
 
     /**

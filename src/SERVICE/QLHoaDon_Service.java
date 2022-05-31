@@ -15,21 +15,21 @@ import java.util.List;
  * @author Admin
  */
 public class QLHoaDon_Service {
-    private QLHoaDon_Dao dhDao;
+    private QLHoaDon_Dao hdDao;
 
     public QLHoaDon_Service() {
-        dhDao = new QLHoaDon_Dao();
+        hdDao = new QLHoaDon_Dao();
     }
 
     public List<QL_HoaDon_229> getAllUsers() throws SQLException {
-        return dhDao.getAllUsers();
+        return hdDao.getAllUsers();
     }
 
-    public void addPhong(QL_HoaDon_229 dh) throws SQLException {
-        dhDao.addDH(dh);
+    public void addPhong(QL_HoaDon_229 hd) throws SQLException {
+        hdDao.addDH(hd);
     }
 
     public void deletePhong(int id) throws SQLException {
-        dhDao.deleteDH(id);
+        hdDao.deleteDH(id);
     }
 }

@@ -5,7 +5,7 @@
 package SERVICE;
 
 import DAO.QLThongKe_Dao;
-import MODEL.QL_SanPhamDaBan_203;
+import MODEL.QL_DanhSachDonHang_203;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -21,7 +21,7 @@ public class QLThongKe_Service {
         qLThongKe_Dao = new QLThongKe_Dao();
     }
     
-    public List<QL_SanPhamDaBan_203> getAllL_SanPhamDaBan() throws SQLException{
+    public List<QL_DanhSachDonHang_203> getAllL_SanPhamDaBan() throws SQLException{
             return qLThongKe_Dao.getAllProduct();
     }
     public int thongKeHangTonKho(String tenSP) throws SQLException{

@@ -4,7 +4,7 @@
  */
 package VIEW;
 
-import MODEL.QL_SanPhamDaBan_203;
+import MODEL.QL_DanhSachDonHang_203;
 import SERVICE.QLThongKe_Service;
 import java.sql.SQLException;
 import java.util.List;
@@ -23,12 +23,12 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
      */
    DefaultTableModel defaultTableModel;
     QLThongKe_Service qLThongKe_Service;
-    QL_SanPhamDaBan_203 qL_SanPhamDaBan_203;
+    QL_DanhSachDonHang_203 qL_SanPhamDaBan_203;
      
     public ThongKe_JPanelFrom() throws SQLException {
         initComponents();
         qLThongKe_Service = new QLThongKe_Service();
-        qL_SanPhamDaBan_203 = new QL_SanPhamDaBan_203();
+        qL_SanPhamDaBan_203 = new QL_DanhSachDonHang_203();
         defaultTableModel = new DefaultTableModel() {
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -38,16 +38,18 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
         };
         hangDaBan.setModel(defaultTableModel);
         
-        defaultTableModel.addColumn("Mã sản phẩm");
+        defaultTableModel.addColumn("Mã đơn hàng");
         defaultTableModel.addColumn("Tên sản phẩm");
-        defaultTableModel.addColumn("số lượng còn");
-        defaultTableModel.addColumn("Số lượng đã bán");
+        defaultTableModel.addColumn("Địa chỉ giao hàng");
+        defaultTableModel.addColumn("Số lượng đặt");
+        defaultTableModel.addColumn("Ngày tạo đơn hàng");
         setTableData(qLThongKe_Service.getAllL_SanPhamDaBan());
     }
- private void setTableData(List<QL_SanPhamDaBan_203> SanPhamDaBan) {
+ private void setTableData(List<QL_DanhSachDonHang_203> SanPhamDaBan) {
         
-     for(QL_SanPhamDaBan_203 sanPhan : SanPhamDaBan){
-         defaultTableModel.addRow(new Object[]{sanPhan.getMaSP_203(), sanPhan.getTenSP_203(), sanPhan.getSoLuongCon_203(), sanPhan.getSoLuongDaBan_203()});
+     for(QL_DanhSachDonHang_203 sanPhan : SanPhamDaBan){
+         defaultTableModel.addRow(new Object[]{sanPhan.getMaDH_203(), sanPhan.getTenSP_203(), sanPhan.getDiaChiGiaoHang_203(), 
+             sanPhan.getSoLuongDat_203(),sanPhan.getNgayTaoDonHang_203()});
 
      }
  }
@@ -91,7 +93,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
         doanhThu.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         doanhThu.setText(".....");
 
-        thongKeDT.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tất cả", "Samsung Galaxy S22 Ultra 5G", "OPPO Ren7 series", "iPhone 11", "iPhone 13 Pro", "iphone 12 Pro", "Bàn phím có dây Gaming Asus TUF K1", "Chuột không dây Gaming Asus TUF M4 WL", "Chuột có dây Gaming Asus Keris", " " }));
+        thongKeDT.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tất cả", "Samsung Galaxy S22 Ultra 5G", "iPhone 11", "OPPO Ren7 series", "iPhone 13 Pro", "iphone 12 Pro", "Bàn phím có dây Gaming Asus TUF K1", "Chuột không dây Gaming Asus TUF M4 WL", "Chuột có dây Gaming Asus Keris", "Bàn phím có dây DareU EK87 ", "Bàn phím cơ có dây Gaming Razer BlackWidow", "Chuột không dây Rapoo M20 Plus Đen", "Cáp Type C- Lightning Apple MM0A3", "Sạc Hydrus CS-TC027", "Cáp Type C Xmobile MU09-1000X", "Đế sạc không dây Mbest AC63F3", "Tai nghe Bluetooth AirPods 2 Apple MRXJ2", "Tai nghe Bluetooth AirPods 3 Apple MME73", "Tai nghe có dây Mozard DS510-WB", "Tai nghe Bluetooth Chụp Tai Kanen K6", "Tai nghe EP Gaming Asus Rog Cetra II Core", " " }));
         thongKeDT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 thongKeDTActionPerformed(evt);
@@ -136,7 +138,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(0, 0, 255));
         jLabel2.setText("Kho Hàng");
 
-        thongKeSL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Samsung Galaxy S22 Ultra 5G", "OPPO Ren7 series", "iPhone 11", "iPhone 13 Pro", "iphone 12 Pro", "Bàn phím có dây Gaming Asus TUF K1", "Chuột không dây Gaming Asus TUF M4 WL", "Chuột có dây Gaming Asus Keris", " " }));
+        thongKeSL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Samsung Galaxy S22 Ultra 5G", "iPhone 11", "OPPO Ren7 series", "iPhone 13 Pro", "iphone 12 Pro", "Bàn phím có dây Gaming Asus TUF K1", "Chuột không dây Gaming Asus TUF M4 WL", "Chuột có dây Gaming Asus Keris", "Bàn phím có dây DareU EK87 ", "Bàn phím cơ có dây Gaming Razer BlackWidow", "Chuột không dây Rapoo M20 Plus Đen", "Cáp Type C- Lightning Apple MM0A3", "Sạc Hydrus CS-TC027", "Cáp Type C Xmobile MU09-1000X", "Đế sạc không dây Mbest AC63F3", "Tai nghe Bluetooth AirPods 2 Apple MRXJ2", "Tai nghe Bluetooth AirPods 3 Apple MME73", "Tai nghe có dây Mozard DS510-WB", "Tai nghe Bluetooth Chụp Tai Kanen K6", "Tai nghe EP Gaming Asus Rog Cetra II Core", " " }));
         thongKeSL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 thongKeSLActionPerformed(evt);

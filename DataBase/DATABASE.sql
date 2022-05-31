@@ -210,8 +210,51 @@ values	(3,2,2),
 		(9,19,3),
 		(10,4,1),
 		(10,6,2);
-
-	
+go 
+--1. Tự động cập nhật số lượng hiện còn ở bảng SanPham mỗi khi insert/ update/ delete vào bảng ChiTietHoaDon;
+create or alter trigger tg_ChiTietHoaDon_SLHC
+on ChiTietHoaDon
+for insert ,update,delete
+as
+begin
+	if not exists (select *
+				from deleted)
+		begin 
+			print N'INSERT dữ liệu '
+			--update so lượng hiện còn 
+			update SanPham
+			set soLuongHienCon=soLuongHienCon-c.soLuongDat
+			from  inserted as i,ChiTietHoaDon as c
+			where SanPham.maSP=i.maSP  and c.maSP=i.maSP and c.maDH=i.maDH
+			if exists (select *
+					from SanPham as s, inserted as i
+					where s.maSP=i.maSP and soLuongHienCon<soLuongDat)
+					begin
+						print N'kho không đủ sản phẩm để bán'
+						rollback transaction;
+					end;
+		end ;
+	else 
+		if  not exists (select *
+						from inserted)
+			begin
+				print N'DELETE dữ liệu'
+				--update so lượng hiện còn 
+				update SanPham
+				set soLuongHienCon=soLuongHienCon+soLuongDat
+				from  deleted as d
+				where SanPham.maSP=d.maSP 
+			end ;
+		else
+			begin
+				print N'UPDATE dữ liệu'
+				--update so lượng hiện còn 
+				update SanPham
+				set soLuongHienCon=soLuongHienCon+d.soLuongDat-i.soLuongDat
+				from  deleted as d,inserted as i
+				where SanPham.maSP=d.maSP and SanPham.maSP=i.maSP
+			end ;
+end
 
 					   			 		  			
 

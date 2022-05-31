@@ -24,7 +24,11 @@ public class QLThongKe_Service {
     public List<QL_SanPhamDaBan_203> getAllL_SanPhamDaBan() throws SQLException{
             return qLThongKe_Dao.getAllProduct();
     }
-    public int getAmountProduct(String tenSP) throws SQLException{
+    public int thongKeHangTonKho(String tenSP) throws SQLException{
         return qLThongKe_Dao.thongKeSOLuong(tenSP);
     }
+    public int thongKeSoLuongDaBan(String tenSP) throws SQLException{
+        return qLThongKe_Dao.ThongKeSoLuongDaBan(tenSP);
+    }
+
 }

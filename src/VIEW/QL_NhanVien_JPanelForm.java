@@ -38,15 +38,15 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
         };
         tblNhanVien_239.setModel(defaultTableModel);
 
-        defaultTableModel.addColumn("MaKH");
-        defaultTableModel.addColumn("HoTen");
-        defaultTableModel.addColumn("GioiTinh");
-        defaultTableModel.addColumn("SoDienThoai");
-        defaultTableModel.addColumn("DiaChi");
+        defaultTableModel.addColumn("MaNV");
+        defaultTableModel.addColumn("TenNV");
         defaultTableModel.addColumn("VaiTro");
-        defaultTableModel.addColumn("TrangThai");
-        defaultTableModel.addColumn("Email");
+        defaultTableModel.addColumn("DiaChi");
+        defaultTableModel.addColumn("SoDienThoai");
         defaultTableModel.addColumn("NgaySinh");
+        defaultTableModel.addColumn("GioiTinh");
+        defaultTableModel.addColumn("Email");
+        defaultTableModel.addColumn("TrangThai");
         setTableData(nvService.getAllUsers());     
        
 
@@ -54,7 +54,7 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
 
     private void setTableData(List<QL_NhanVien_239> nhanvien) {
         for (QL_NhanVien_239 nv : nhanvien) {
-            defaultTableModel.addRow(new Object[]{nv.getMaNV_239(), nv.getTenNV_239(), nv.getGioiTinh_239(), nv.getdienthoai_239(), nv.getdiaChi_239(),nv.getVaiTro_239(),nv.getTrangThai_239(),nv.getemail_239(),nv.getNgaySinh_239()});
+            defaultTableModel.addRow(new Object[]{nv.getMaNV_239(), nv.getTenNV_239(), nv.getVaiTro_239(), nv.getDiaChi_239(), nv.getDienthoai_239(),nv.getNgaySinh_239(),nv.getGioiTinh_239(),nv.getEmail_239(),nv.getTrangThai_239()});
 
         }
     }

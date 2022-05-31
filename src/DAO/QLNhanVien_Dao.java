@@ -29,15 +29,15 @@ public class QLNhanVien_Dao {
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 QL_NhanVien_239 nv = new QL_NhanVien_239();
-                nv.setmaNV_239(rs.getInt("MANV"));
-                nv.settenNV_239(rs.getString("TENNV"));
-                nv.setdiaChi_239(rs.getString("DIACHI"));
-                nv.setdienthoai_239(rs.getString("SDT"));
-                nv.setgioiTinh_239(rs.getString("GIOITINH"));
-                nv.setemail_239(rs.getString("EMAIL"));
-                nv.setvaiTro_239(rs.getString("VAITRO"));
-                nv.ngaySinh_239(rs.getString("NGAYSINH"));
-                nv.trangThai_239(rs.getString("TRANGTHAI"));
+                nv.setMaNV_239(rs.getInt("MANV"));
+                nv.setTenNV_239(rs.getString("TENNV"));
+                nv.setVaiTro_239(rs.getString("VAITRO"));
+                nv.setDiaChi_239(rs.getString("DIACHI"));
+                nv.setDienthoai_239(rs.getString("SDT"));
+                nv.setNgaySinh_239(rs.getString("NGAYSINH"));
+                nv.setGioiTinh_239(rs.getString("GIOITINH"));
+                nv.setEmail_239(rs.getString("EMAIL"));
+                nv.setTrangThai_239(rs.getString("TRANGTHAI"));
               
                 nhanvien.add(nv);
 
@@ -51,17 +51,17 @@ public class QLNhanVien_Dao {
 
     public void addNV(QL_NhanVien_239 phong) throws SQLException {
         Connection con = ConnectDB.getJBDCConnection();
-        String sql = "INSERT INTO NhanVien ( TENNV, DIACHI, SDT, GIOITINH, VAITRO, EMAIL, TRANGTHAI, NGAYSINH ) VALUES(?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO NhanVien ( TENNV, VAITRO,  DIACHI, SDT, NGAYSINH, GIOITINH, EMAIL,  TRANGTHAI ) VALUES(?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, phong.gethoTen_239());
-            pstmt.setString(2, phong.getdiaChi_239());
-            pstmt.setString(3, phong.getdienthoai_239());
-            pstmt.setString(4, phong.getgioiTinh_239());  
-            pstmt.setString(5, phong.getvaiTro_239());  
-            pstmt.setString(6, phong.getemail_239());  
-            pstmt.setString(7, phong.gettrangThai_239());  
-            pstmt.setString(8, phong.getngaySinh_239());  
+            pstmt.setString(1, phong.getTenNV_239());
+            pstmt.setString(2, phong.getVaiTro_239()); 
+            pstmt.setString(3, phong.getDiaChi_239());
+            pstmt.setString(4, phong.getDienthoai_239());  
+            pstmt.setString(5, phong.getNgaySinh_239());  
+            pstmt.setString(6, phong.getNgaySinh_239());  
+            pstmt.setString(7, phong.getEmail_239());  
+            pstmt.setString(8, phong.getTrangThai_239());  
 
             int rs = pstmt.executeUpdate();
             System.out.println(rs);
@@ -73,17 +73,17 @@ public class QLNhanVien_Dao {
     }
      public void updateNV(QL_NhanVien_239 nv) throws SQLException {
         Connection connection = ConnectDB.getJBDCConnection();
-        String sql = "UPDATE NhanVien SET TENNV = ?, DIACHI = ?, SDT = ?,GIOITINH = ?,VAITRO = ?,EMAIL = ?,TRANGTHAI = ?,NGAYSINH =? WHERE MAKH =?";
+        String sql = "UPDATE NhanVien SET TENNV = ?, VAITRO = ?, DIACHI = ?, SDT = ?, NGAYSINH =?,GIOITINH = ?,EMAIL = ?,TRANGTHAI = ? WHERE MANV =?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, nv.gethoTen_239());
-            preparedStatement.setString(2, nv.getdiaChi_239());
-            preparedStatement.setString(3, nv.getdienthoai_239());
-            preparedStatement.setString(4, nv.getgioiTinh_239());
-            preparedStatement.setString(5, nv.getvaiTro_239());
-            preparedStatement.setString(6, nv.getemail_239());
-            preparedStatement.setString(7, nv.gettrangThai_239());
-            preparedStatement.setString(8, nv.getngaySinh_239());
+            preparedStatement.setString(1, nv.getTenNV_239());
+            preparedStatement.setString(2, nv.getVaiTro_239());
+            preparedStatement.setString(3, nv.getDiaChi_239());
+            preparedStatement.setString(4, nv.getDienthoai_239());
+            preparedStatement.setString(5, nv.getNgaySinh_239());
+            preparedStatement.setString(6, nv.getGioiTinh_239());
+            preparedStatement.setString(7, nv.getEmail_239());
+            preparedStatement.setString(8, nv.getTrangThai_239());
            
             
             int rs = preparedStatement.executeUpdate();
@@ -96,7 +96,7 @@ public class QLNhanVien_Dao {
     public void deleteNV(int id) throws SQLException {
         Connection connection = ConnectDB.getJBDCConnection();
 
-        String sql = "delete from NhanVien where MAKH = ?";
+        String sql = "delete from NhanVien where MANV = ?";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);

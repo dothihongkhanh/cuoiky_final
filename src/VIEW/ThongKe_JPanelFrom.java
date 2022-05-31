@@ -38,9 +38,9 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
         };
         hangDaBan.setModel(defaultTableModel);
         
-        defaultTableModel.addColumn("Mã đơn hàng");
         defaultTableModel.addColumn("Mã sản phẩm");
         defaultTableModel.addColumn("Tên sản phẩm");
+        defaultTableModel.addColumn("số lượng còn");
         defaultTableModel.addColumn("Số lượng đã bán");
         setTableData(qLThongKe_Service.getAllL_SanPhamDaBan());
     }
@@ -280,7 +280,13 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
     }//GEN-LAST:event_thongKeSLActionPerformed
 
     private void thongKeDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDTActionPerformed
-     
+      String doanhThuString = null;
+          try {
+              doanhThuString= Integer.toString(qLThongKe_Service.ThongKeDoanhThu((String) thongKeDT.getSelectedItem()));
+          } catch (SQLException ex) {
+              Logger.getLogger(ThongKe_JPanelFrom.class.getName()).log(Level.SEVERE, null, ex);
+          }
+           doanhThu.setText(doanhThuString);  
     }//GEN-LAST:event_thongKeDTActionPerformed
 
 

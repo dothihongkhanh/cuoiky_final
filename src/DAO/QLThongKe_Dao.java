@@ -68,6 +68,32 @@ public class QLThongKe_Dao {
         }
         return tong;
     }
-
+    public int ThongKeDoanhThu(String tenSp) throws SQLException{
+        int doanhThu=0;
+        Connection connection = ConnectDB.getJBDCConnection();
+        if(!"Tất cả".equals(tenSp)){
+        String sql = "select donGiaBan,soLuongDat\n"
+                + "from SanPham,ChiTietHoaDon\n"
+                + "where tenSP=?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, tenSp);
+        ResultSet rs = preparedStatement.executeQuery();
+        while (rs.next()) {
+           doanhThu+= rs.getInt(1)*rs.getInt(2);           
+        }
+        return doanhThu;
+        }
+        else{
+            String sql = "select donGiaBan,soLuongDat\n"
+                + "from SanPham,ChiTietHoaDon\n";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        ResultSet rs = preparedStatement.executeQuery();
+        while (rs.next()) {
+           doanhThu+= rs.getInt(1)*rs.getInt(2);           
+        }
+        return doanhThu;
+        }
+    }
+   
 
 }

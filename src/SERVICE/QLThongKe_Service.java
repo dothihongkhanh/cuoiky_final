@@ -30,5 +30,7 @@ public class QLThongKe_Service {
     public int thongKeSoLuongDaBan(String tenSP) throws SQLException{
         return qLThongKe_Dao.ThongKeSoLuongDaBan(tenSP);
     }
-
+    public int ThongKeDoanhThu(String tenSp) throws SQLException{
+        return qLThongKe_Dao.ThongKeDoanhThu(tenSp);
+    }
 }

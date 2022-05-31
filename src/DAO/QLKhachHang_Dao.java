@@ -45,15 +45,15 @@ public class QLKhachHang_Dao {
 
     }
 
-    public void addKH(QL_KhachHang_212 phong) throws SQLException {
+    public void addKH(QL_KhachHang_212 kh) throws SQLException {
         Connection con = ConnectDB.getJBDCConnection();
         String sql = "INSERT INTO KhachHang ( TENKH, DIACHI, SDT, GIOITINH) VALUES(?,?,?,?)";
         try {
             PreparedStatement pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, phong.getHoTen_212());
-            pstmt.setString(2, phong.getDiachi_212());
-            pstmt.setString(3, phong.getSdt_212());
-            pstmt.setString(4, phong.getGioiTinh_212());             
+            pstmt.setString(1, kh.getHoTen_212());
+            pstmt.setString(2, kh.getDiachi_212());
+            pstmt.setString(3, kh.getSdt_212());
+            pstmt.setString(4, kh.getGioiTinh_212());             
 
             int rs = pstmt.executeUpdate();
             System.out.println(rs);

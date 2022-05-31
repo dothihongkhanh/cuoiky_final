@@ -24,11 +24,13 @@ public class QLKhachHang_Service {
         return khDao.getAllUsers();
     }
 
-    public void addPhong(QL_KhachHang_212 kh) throws SQLException {
+    public void addKH(QL_KhachHang_212 kh) throws SQLException {
         khDao.addKH(kh);
     }
-
-    public void deletePhong(int id) throws SQLException {
+    public void updateKH(QL_KhachHang_212 kh) throws SQLException {
+        khDao.updateKH(kh);
+    }
+    public void deleteKH(int id) throws SQLException {
         khDao.deleteKH(id);
     }
 }

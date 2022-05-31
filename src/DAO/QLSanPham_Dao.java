@@ -47,7 +47,7 @@ public class QLSanPham_Dao {
 
     }
 
-    public void addKH(QL_SanPham_211 phong) throws SQLException {
+    public void addSP(QL_SanPham_211 phong) throws SQLException {
         Connection con = ConnectDB.getJBDCConnection();
         String sql = "INSERT INTO SanPham ( TENSP, DONGIABAN, SOLUONGHIENCON) VALUES(?,?,?)";
         try {

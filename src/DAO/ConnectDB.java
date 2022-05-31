@@ -16,7 +16,7 @@ public class ConnectDB {
     public static Connection getJBDCConnection() throws SQLException {
         final String url = "jdbc:sqlserver://localhost:1433;databaseName=QUANLITHIETBICONGNGHE_KLN";
         final String user = "sa";
-        final String password = "123";
+        final String password = "123456";
 
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

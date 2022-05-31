@@ -103,17 +103,26 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel1_212" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel2_212" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel3_212" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel4_212" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel_212" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel4_212" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel3_212" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jScrollPane2_212" pref="190" max="32767" attributes="0"/>
-                                          <Component id="cbxMucGiamGia_212" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtTenCTKM_212" pref="190" max="32767" attributes="0"/>
-                                          <Component id="jDateChooserNBD_212" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jDateChooserNKT_212" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="jScrollPane2_212" pref="190" max="32767" attributes="0"/>
+                                                  <Component id="cbxMucGiamGia_212" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txtTenCTKM_212" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jDateChooserNBD_212" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jDateChooserNKT_212" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
                                       </Group>
                                   </Group>
                               </Group>
@@ -138,24 +147,23 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel3_212" min="-2" max="-2" attributes="0"/>
-                          <Component id="jDateChooserNBD_212" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                              <Component id="jLabel3_212" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jLabel4_212" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jLabel_212" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jDateChooserNBD_212" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="jDateChooserNKT_212" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jScrollPane2_212" min="-2" pref="75" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="21" max="32767" attributes="0"/>
+                      <EmptySpace pref="25" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnLuu_212" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnRefresh_212" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -261,6 +269,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="L&#xe0;m m&#x1edb;i"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRefresh_212ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
@@ -272,14 +283,14 @@
             <Component class="com.toedter.calendar.JDateChooser" name="jDateChooserNBD_212">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[88, 28]"/>
+                  <Dimension value="[190, 28]"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="jDateChooserNKT_212">
               <Properties>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[88, 28]"/>
+                  <Dimension value="[190, 28]"/>
                 </Property>
               </Properties>
             </Component>

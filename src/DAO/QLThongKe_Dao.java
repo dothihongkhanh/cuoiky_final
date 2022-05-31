@@ -38,22 +38,24 @@ public class QLThongKe_Dao {
             }
             return QL_SanPhamDaBans;
     }
-    public static void main(String[] args) throws SQLException {
-        try (Connection connection = ConnectDB.getJBDCConnection()) {
-            String sql = "select SanPham.maSP,tenSP,soLuongHienCon,soLuongDat\n" +
-                    "from SanPham,ChiTietHoaDon";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()) {
-                //Di chuyển con trỏ xuống bản ghi kế tiếp
-                int id = rs.getInt(1);
-                String username = rs.getString(2);
-                int password = rs.getInt(3);
-                int email = rs.getInt(4);
+     public int thongKeSOLuong(String tenSp) throws SQLException{
+      int tong = 0;
+       Connection connection = ConnectDB.getJBDCConnection();
 
-                System.out.println(id + " - " + username + " - " + password + " - " + email);
-            }
-            //Đóng kết nối
-        }
+        String sql = "select soLuongHienCon\n" +
+                            "from SanPham where tenSP=?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+           preparedStatement.setString(1, tenSp);
+           ResultSet rs = preparedStatement.executeQuery();
+           while (rs.next()) {
+          tong  =rs.getInt(1);
+      }
+     return tong;
+}
+ 
+    public static void main(String[] args) throws SQLException {
+        QLThongKe_Dao qLSanPham_Dao = new QLThongKe_Dao();
+        System.out.println(qLSanPham_Dao.thongKeSOLuong("iPhone 11"));
+       
     }
 }

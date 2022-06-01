@@ -21,11 +21,8 @@ create table NhanVien
 	ngaySinh date ,
 	gioiTinh nvarchar(3),
 	email varchar(50),
-	trangThai nvarchar(30),
-	matKhau varchar(50) not null
+	trangThai nvarchar(30)
 )
-alter table NhanVien
-drop column matKhau 
 go 
  create table SanPham
  (
@@ -199,7 +196,23 @@ values ('1/5/2022',N'Ông Ích Khiêm, Đà Nẵng',N'Tiền mặt','2/5/2022','
 		('28/5/2022',N'Lê Duẩn, Đà Nẵng',N'Tiền mặt','28/5/2022','28/5/2022',5,6,4),
 		('28/5/2022',N'Điện Biên Phủ, Đà Nẵng',N'Tiền mặt','28/5/2022','28/5/2022',1,5,4);
 go 
-insert into ChiTietHoaDon 
+alter table ChiTietHoaDon
+ add donGia money null
+go
+-- tạo trigger tự động cập nhật đơn giá cho bảng  Chi tiết hóa đơn khi chèn dữ liệu vào SanPham
+create or alter trigger tg_ChiTietHoaDon_DonGia
+on ChiTietHoaDon
+for insert,update,delete
+as
+begin 
+	print N'chèn đơn giá'
+	 update ChiTietHoaDon
+	 set donGia=donGiaBan
+	 from SanPham as s, inserted as i
+	 where ChiTietHoaDon.maSP=i.maSP and ChiTietHoaDon.maDH=i.maDH and s.maSP=ChiTietHoaDon.maSP
+end
+go
+insert into ChiTietHoaDon (maDH,maSP,soLuongDat)
 values	(3,2,2),
 		(4,3,1),
 		(5,3,2),

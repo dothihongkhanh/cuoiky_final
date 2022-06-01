@@ -312,6 +312,11 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
         btLammoi_239.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btLammoi_239.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/refresh.png"))); // NOI18N
         btLammoi_239.setText("Làm mới");
+        btLammoi_239.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLammoi_239ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 12;
@@ -547,6 +552,18 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
         
         
     }//GEN-LAST:event_tblNhanVien_239MouseClicked
+
+    private void btLammoi_239ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLammoi_239ActionPerformed
+        // TODO add your handling code here:
+        tenNV_239.setText("");
+        dienthoai_239.setText("");
+        diaChi_239.setText("");
+        vaitro_239.setText("");
+        email_239.setText("");
+        ngaysinh_239.setText("");        
+        buttonGroup1.clearSelection();
+        buttonGroup2.clearSelection();
+    }//GEN-LAST:event_btLammoi_239ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

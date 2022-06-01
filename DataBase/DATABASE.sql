@@ -255,7 +255,9 @@ begin
 				where SanPham.maSP=d.maSP and SanPham.maSP=i.maSP
 			end ;
 end
-
+--update table KhuyenMai
+update KhuyenMai
+	set moTa=N'Khuyến mãi'
 					   			 		  			
 
 

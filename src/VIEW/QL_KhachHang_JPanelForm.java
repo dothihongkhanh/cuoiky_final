@@ -440,6 +440,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
 
     private void tblKhachHang_212MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblKhachHang_212MouseClicked
         // TODO add your handling code here:
+        txtMaKH_212.setEnabled(false);
         int i = tblKhachHang_212.getSelectedRow();
         txtMaKH_212.setText(tblKhachHang_212.getValueAt(i, 0).toString());
         txtTenKH_212.setText(tblKhachHang_212.getValueAt(i, 1).toString());
@@ -491,6 +492,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
 
     private void btnAdd_212ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd_212ActionPerformed
         // TODO add your handling code here:
+        txtMaKH_212.setEnabled(false);
         if (txtTenKH_212.getText().equals("") || txtSDT_212.getText().equals("") || txtAreaDiaChi_212.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Vui lòng điền đầy đủ thông tin!");
         } else {

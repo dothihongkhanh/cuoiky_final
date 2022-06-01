@@ -63,20 +63,20 @@ public class QLKhachHang_Dao {
             e.printStackTrace();
         }
     }
-     public void updateKH(QL_KhachHang_212 kh) throws SQLException {
+    public void updateKH(QL_KhachHang_212 kh) throws SQLException {
         Connection connection = ConnectDB.getJBDCConnection();
         String sql = "UPDATE KhachHang SET TENKH = ?, DIACHI = ?, SDT = ?,GIOITINH = ? WHERE MAKH =?";
-        try {
+        try{
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, kh.getHoTen_212());
             preparedStatement.setString(2, kh.getDiachi_212());
             preparedStatement.setString(3, kh.getSdt_212());
             preparedStatement.setString(4, kh.getGioiTinh_212());
+            preparedStatement.setInt(5, kh.getMaKH_212());
             
-            int rs = preparedStatement.executeUpdate();
-            System.out.println(rs);
-        } catch (SQLException e) {
-            e.printStackTrace();
+            preparedStatement.executeUpdate();;
+       }catch(Exception e){
+            
         }
     }
 

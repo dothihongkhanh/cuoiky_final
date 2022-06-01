@@ -9,6 +9,7 @@ import SERVICE.QLKhuyenMai_Service;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -228,6 +229,11 @@ public class QL_KhuyenMai_JPanelForm extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tbDSKM_212.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbDSKM_212MouseClicked(evt);
+            }
+        });
         jScrollPane3_212.setViewportView(tbDSKM_212);
 
         btnTimKiem_212.setBackground(new java.awt.Color(153, 153, 255));
@@ -294,6 +300,19 @@ public class QL_KhuyenMai_JPanelForm extends javax.swing.JPanel {
         txtAreaMoTa_212.setText("");        
         
     }//GEN-LAST:event_btnRefresh_212ActionPerformed
+
+    private void tbDSKM_212MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbDSKM_212MouseClicked
+        // TODO add your handling code here:
+        int i = tbDSKM_212.getSelectedRow();
+        txtTenCTKM_212.setText(tbDSKM_212.getValueAt(i, 1).toString());
+        cbxMucGiamGia_212.setSelectedItem(tbDSKM_212.getValueAt(i, 2).toString());
+        ((JTextField) jDateChooserNBD_212.getDateEditor().getUiComponent()).setText("");
+        ((JTextField) jDateChooserNBD_212.getDateEditor().getUiComponent()).setText(tbDSKM_212.getValueAt(i, 3).toString());
+        ((JTextField) jDateChooserNKT_212.getDateEditor().getUiComponent()).setText("");
+        ((JTextField) jDateChooserNKT_212.getDateEditor().getUiComponent()).setText(tbDSKM_212.getValueAt(i, 4).toString());
+        txtAreaMoTa_212.setText(tbDSKM_212.getValueAt(i, 5).toString());
+
+    }//GEN-LAST:event_tbDSKM_212MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

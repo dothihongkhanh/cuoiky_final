@@ -130,24 +130,26 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblGT_212" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="lblTKH_212" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblGT_212" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="rdobtnNam_212" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                   <Component id="rdobtnNu_212" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="144" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="txtTenKH_212" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="lblSDT_212" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="lblDC_212" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Component id="txtMaKH_212" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtTenKH_212" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -168,23 +170,25 @@
                               <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtMaKH_212" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="jScrollPane1" min="-2" pref="107" max="-2" attributes="0"/>
                                   <EmptySpace pref="12" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="rdobtnNam_212" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="rdobtnNu_212" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblGT_212" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblDC_212" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="lblDC_212" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtTenKH_212" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="lblTKH_212" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lblTKH_212" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtTenKH_212" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rdobtnNu_212" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rdobtnNam_212" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblGT_212" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>

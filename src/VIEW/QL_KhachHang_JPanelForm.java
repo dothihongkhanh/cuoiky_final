@@ -142,21 +142,22 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
             .addGroup(jPanel2_212Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblGT_212)
                     .addComponent(jLabel1)
-                    .addComponent(lblTKH_212))
+                    .addComponent(lblTKH_212)
+                    .addComponent(lblGT_212))
                 .addGap(12, 12, 12)
                 .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2_212Layout.createSequentialGroup()
                         .addComponent(rdobtnNam_212)
-                        .addGap(18, 18, 18)
-                        .addComponent(rdobtnNu_212)
-                        .addGap(144, 144, 144)
+                        .addGap(16, 16, 16)
+                        .addComponent(rdobtnNu_212))
+                    .addGroup(jPanel2_212Layout.createSequentialGroup()
+                        .addComponent(txtTenKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50)
                         .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblSDT_212)
                             .addComponent(lblDC_212)))
-                    .addComponent(txtMaKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTenKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtMaKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtSDT_212, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -172,21 +173,22 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
                     .addComponent(txtSDT_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
                     .addComponent(txtMaKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
+                .addGap(15, 15, 15)
                 .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2_212Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(12, Short.MAX_VALUE))
                     .addGroup(jPanel2_212Layout.createSequentialGroup()
-                        .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rdobtnNam_212)
-                            .addComponent(rdobtnNu_212)
-                            .addComponent(lblGT_212)
-                            .addComponent(lblDC_212))
+                        .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lblDC_212)
+                                .addComponent(txtTenKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblTKH_212, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblTKH_212)
-                            .addComponent(txtTenKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(rdobtnNu_212)
+                            .addComponent(rdobtnNam_212)
+                            .addComponent(lblGT_212))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
 
@@ -425,24 +427,52 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
     private void tblKhachHang_212MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblKhachHang_212MouseClicked
         // TODO add your handling code here:
         int i = tblKhachHang_212.getSelectedRow();
-        txtTenKH_212.setText(tblKhachHang_212.getValueAt(i,1).toString());
-        String gender = tblKhachHang_212.getValueAt(i,2).toString();
-        if (gender.equalsIgnoreCase("Nam")){
+        txtMaKH_212.setText(tblKhachHang_212.getValueAt(i, 0).toString());
+        txtTenKH_212.setText(tblKhachHang_212.getValueAt(i, 1).toString());
+        String gender = tblKhachHang_212.getValueAt(i, 2).toString();
+        if (gender.equalsIgnoreCase("Nam")) {
             rdobtnNam_212.setSelected(true);
             rdobtnNu_212.setSelected(false);
-        }
-        else{
+        } else {
             rdobtnNu_212.setSelected(true);
             rdobtnNam_212.setSelected(false);
         }
-        txtSDT_212.setText(tblKhachHang_212.getValueAt(i,3).toString());
-        txtAreaDiaChi_212.setText(tblKhachHang_212.getValueAt(i,4).toString());
+        txtSDT_212.setText(tblKhachHang_212.getValueAt(i, 3).toString());
+        txtAreaDiaChi_212.setText(tblKhachHang_212.getValueAt(i, 4).toString());
+                
 
     }//GEN-LAST:event_tblKhachHang_212MouseClicked
 
     private void btnSua_212ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_212ActionPerformed
         // TODO add your handling code here:
-        
+        int x = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thay đổi không?");
+        if (x == JOptionPane.NO_OPTION) {
+            return;
+        } else {
+           
+            try {
+                QL_KhachHang_212 kh = new QL_KhachHang_212();
+                kh.setMaKH_212(Integer.parseInt(txtMaKH_212.getText()));
+                kh.setHoTen_212(txtTenKH_212.getText());
+                kh.setDiachi_212(txtAreaDiaChi_212.getText());
+                kh.setSdt_212(txtSDT_212.getText());
+                String gioiTinh_212 = "Nam";
+                if (rdobtnNam_212.isSelected()) {
+                    gioiTinh_212 = "Nam";// lua chon 1 trong 2
+                }
+                if (rdobtnNu_212.isSelected()) {
+                    gioiTinh_212 = "Nữ";
+                }
+                kh.setGioiTinh_212(gioiTinh_212);
+                khService.updateKH(kh);
+                defaultTableModel.setRowCount(0);
+                setTableData(khService.getAllUsers());
+            } catch (SQLException ex) {
+                Logger.getLogger(QL_KhachHang_JPanelForm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            
+        }
     }//GEN-LAST:event_btnSua_212ActionPerformed
     
     private void btnAdd_212ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd_212ActionPerformed
@@ -477,6 +507,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
 
     private void btnLamMoi_212ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLamMoi_212ActionPerformed
         // TODO add your handling code here:
+        txtMaKH_212.setText("");
         txtTenKH_212.setText("");
         txtSDT_212.setText("");
         txtAreaDiaChi_212.setText("");

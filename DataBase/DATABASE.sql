@@ -15,9 +15,9 @@ create table NhanVien
 (
 	maNV int not null primary key identity(1,1),
 	tenNV nvarchar(50) not null ,
-	vaiTro nvarchar(50) not null,
+	vaiTro nvarchar(50) ,
 	diaChi nvarchar(80) ,
-	SDT varchar(11) not null,
+	SDT varchar(11) ,
 	ngaySinh date ,
 	gioiTinh nvarchar(50),
 	email varchar(50),

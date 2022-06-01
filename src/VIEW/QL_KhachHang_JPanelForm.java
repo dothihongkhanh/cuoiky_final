@@ -6,9 +6,14 @@ package VIEW;
 
 import MODEL.QL_KhachHang_212;
 import SERVICE.QLKhachHang_Service;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -315,6 +320,11 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
         btnSearch_212.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/search.png"))); // NOI18N
         btnSearch_212.setText("Tìm kiếm");
         btnSearch_212.setPreferredSize(new java.awt.Dimension(112, 28));
+        btnSearch_212.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearch_212ActionPerformed(evt);
+            }
+        });
 
         jLabel5_212.setText("Lọc theo giới tính");
 
@@ -513,6 +523,64 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
         txtAreaDiaChi_212.setText("");
         buttonGroup1.clearSelection();
     }//GEN-LAST:event_btnLamMoi_212ActionPerformed
+
+    private void btnSearch_212ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearch_212ActionPerformed
+        // TODO add your handling code here:
+        Connection conn = null;
+        Statement st = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DriverManager.getConnection("jdbc:sqlserver://localhost;DatabaseName=QUANLITHIETBICONGNGHE_KLN", "sa", "123456");
+            // Câu lệnh xem dữ liệu
+            String sql = "select * from KhachHang ";
+            // Nếu tìm kiếm theo title
+            if (txtSearch_212.getText().length() > 0) {
+                sql = sql + " where tenKH like '%" + txtSearch_212.getText() + "%'";
+            }
+            // Tạo đối tượng thực thi câu lệnh Select
+            st = conn.createStatement();
+            // Thực thi 
+            rs = st.executeQuery(sql);
+            Vector data = null;
+            defaultTableModel.setRowCount(0);
+            // Nếu sách không tồn tại
+            if (rs.isBeforeFirst() == false) {
+                JOptionPane.showMessageDialog(this, "Tên khách hàng không có trong danh sách!");
+                return;
+            }
+            // Trong khi chưa hết dữ liệu
+            while (rs.next()) {
+                data = new Vector();
+                data.add(rs.getInt("maKH"));
+                data.add(rs.getString("tenKH"));
+                data.add(rs.getString("diaChi"));
+                data.add(rs.getString("SDT"));
+                data.add(rs.getString("gioiTinh"));
+                
+                // Thêm một dòng vào table model
+                defaultTableModel.addRow(data);
+            }
+            tblKhachHang_212.setModel(defaultTableModel); // Thêm dữ liệu vào table
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+
+    }//GEN-LAST:event_btnSearch_212ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

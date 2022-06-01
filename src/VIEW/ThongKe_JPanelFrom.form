@@ -138,35 +138,39 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="0"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="....."/>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="thongKeDT">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="22">
-                    <StringItem index="0" value="T&#x1ea5;t c&#x1ea3;"/>
-                    <StringItem index="1" value="Samsung Galaxy S22 Ultra 5G"/>
-                    <StringItem index="2" value="iPhone 11"/>
-                    <StringItem index="3" value="OPPO Ren7 series"/>
-                    <StringItem index="4" value="iPhone 13 Pro"/>
-                    <StringItem index="5" value="iphone 12 Pro"/>
-                    <StringItem index="6" value="B&#xe0;n ph&#xed;m c&#xf3; d&#xe2;y Gaming Asus TUF K1"/>
-                    <StringItem index="7" value="Chu&#x1ed9;t kh&#xf4;ng d&#xe2;y Gaming Asus TUF M4 WL"/>
-                    <StringItem index="8" value="Chu&#x1ed9;t c&#xf3; d&#xe2;y Gaming Asus Keris"/>
-                    <StringItem index="9" value="B&#xe0;n ph&#xed;m c&#xf3; d&#xe2;y DareU EK87 "/>
-                    <StringItem index="10" value="B&#xe0;n ph&#xed;m c&#x1a1; c&#xf3; d&#xe2;y Gaming Razer BlackWidow"/>
-                    <StringItem index="11" value="Chu&#x1ed9;t kh&#xf4;ng d&#xe2;y Rapoo M20 Plus &#x110;en"/>
-                    <StringItem index="12" value="C&#xe1;p Type C- Lightning Apple MM0A3"/>
-                    <StringItem index="13" value="S&#x1ea1;c Hydrus CS-TC027"/>
-                    <StringItem index="14" value="C&#xe1;p Type C Xmobile MU09-1000X"/>
-                    <StringItem index="15" value="&#x110;&#x1ebf; s&#x1ea1;c kh&#xf4;ng d&#xe2;y Mbest AC63F3"/>
-                    <StringItem index="16" value="Tai nghe Bluetooth AirPods 2 Apple MRXJ2"/>
-                    <StringItem index="17" value="Tai nghe Bluetooth AirPods 3 Apple MME73"/>
-                    <StringItem index="18" value="Tai nghe c&#xf3; d&#xe2;y Mozard DS510-WB"/>
-                    <StringItem index="19" value="Tai nghe Bluetooth Ch&#x1ee5;p Tai Kanen K6"/>
-                    <StringItem index="20" value="Tai nghe EP Gaming Asus Rog Cetra II Core"/>
-                    <StringItem index="21" value=" "/>
+                  <StringArray count="23">
+                    <StringItem index="0" value="..........."/>
+                    <StringItem index="1" value="T&#x1ea5;t c&#x1ea3;"/>
+                    <StringItem index="2" value="Samsung Galaxy S22 Ultra 5G"/>
+                    <StringItem index="3" value="iPhone 11"/>
+                    <StringItem index="4" value="OPPO Ren7 series"/>
+                    <StringItem index="5" value="iPhone 13 Pro"/>
+                    <StringItem index="6" value="iphone 12 Pro"/>
+                    <StringItem index="7" value="B&#xe0;n ph&#xed;m c&#xf3; d&#xe2;y Gaming Asus TUF K1"/>
+                    <StringItem index="8" value="Chu&#x1ed9;t kh&#xf4;ng d&#xe2;y Gaming Asus TUF M4 WL"/>
+                    <StringItem index="9" value="Chu&#x1ed9;t c&#xf3; d&#xe2;y Gaming Asus Keris"/>
+                    <StringItem index="10" value="B&#xe0;n ph&#xed;m c&#xf3; d&#xe2;y DareU EK87 "/>
+                    <StringItem index="11" value="B&#xe0;n ph&#xed;m c&#x1a1; c&#xf3; d&#xe2;y Gaming Razer BlackWidow"/>
+                    <StringItem index="12" value="Chu&#x1ed9;t kh&#xf4;ng d&#xe2;y Rapoo M20 Plus &#x110;en"/>
+                    <StringItem index="13" value="C&#xe1;p Type C- Lightning Apple MM0A3"/>
+                    <StringItem index="14" value="S&#x1ea1;c Hydrus CS-TC027"/>
+                    <StringItem index="15" value="C&#xe1;p Type C Xmobile MU09-1000X"/>
+                    <StringItem index="16" value="&#x110;&#x1ebf; s&#x1ea1;c kh&#xf4;ng d&#xe2;y Mbest AC63F3"/>
+                    <StringItem index="17" value="Tai nghe Bluetooth AirPods 2 Apple MRXJ2"/>
+                    <StringItem index="18" value="Tai nghe Bluetooth AirPods 3 Apple MME73"/>
+                    <StringItem index="19" value="Tai nghe c&#xf3; d&#xe2;y Mozard DS510-WB"/>
+                    <StringItem index="20" value="Tai nghe Bluetooth Ch&#x1ee5;p Tai Kanen K6"/>
+                    <StringItem index="21" value="Tai nghe EP Gaming Asus Rog Cetra II Core"/>
+                    <StringItem index="22" value=" "/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -256,28 +260,29 @@
             <Component class="javax.swing.JComboBox" name="thongKeSL">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="21">
-                    <StringItem index="0" value="Samsung Galaxy S22 Ultra 5G"/>
-                    <StringItem index="1" value="iPhone 11"/>
-                    <StringItem index="2" value="OPPO Ren7 series"/>
-                    <StringItem index="3" value="iPhone 13 Pro"/>
-                    <StringItem index="4" value="iphone 12 Pro"/>
-                    <StringItem index="5" value="B&#xe0;n ph&#xed;m c&#xf3; d&#xe2;y Gaming Asus TUF K1"/>
-                    <StringItem index="6" value="Chu&#x1ed9;t kh&#xf4;ng d&#xe2;y Gaming Asus TUF M4 WL"/>
-                    <StringItem index="7" value="Chu&#x1ed9;t c&#xf3; d&#xe2;y Gaming Asus Keris"/>
-                    <StringItem index="8" value="B&#xe0;n ph&#xed;m c&#xf3; d&#xe2;y DareU EK87 "/>
-                    <StringItem index="9" value="B&#xe0;n ph&#xed;m c&#x1a1; c&#xf3; d&#xe2;y Gaming Razer BlackWidow"/>
-                    <StringItem index="10" value="Chu&#x1ed9;t kh&#xf4;ng d&#xe2;y Rapoo M20 Plus &#x110;en"/>
-                    <StringItem index="11" value="C&#xe1;p Type C- Lightning Apple MM0A3"/>
-                    <StringItem index="12" value="S&#x1ea1;c Hydrus CS-TC027"/>
-                    <StringItem index="13" value="C&#xe1;p Type C Xmobile MU09-1000X"/>
-                    <StringItem index="14" value="&#x110;&#x1ebf; s&#x1ea1;c kh&#xf4;ng d&#xe2;y Mbest AC63F3"/>
-                    <StringItem index="15" value="Tai nghe Bluetooth AirPods 2 Apple MRXJ2"/>
-                    <StringItem index="16" value="Tai nghe Bluetooth AirPods 3 Apple MME73"/>
-                    <StringItem index="17" value="Tai nghe c&#xf3; d&#xe2;y Mozard DS510-WB"/>
-                    <StringItem index="18" value="Tai nghe Bluetooth Ch&#x1ee5;p Tai Kanen K6"/>
-                    <StringItem index="19" value="Tai nghe EP Gaming Asus Rog Cetra II Core"/>
-                    <StringItem index="20" value=" "/>
+                  <StringArray count="22">
+                    <StringItem index="0" value="........."/>
+                    <StringItem index="1" value="Samsung Galaxy S22 Ultra 5G"/>
+                    <StringItem index="2" value="iPhone 11"/>
+                    <StringItem index="3" value="OPPO Ren7 series"/>
+                    <StringItem index="4" value="iPhone 13 Pro"/>
+                    <StringItem index="5" value="iphone 12 Pro"/>
+                    <StringItem index="6" value="B&#xe0;n ph&#xed;m c&#xf3; d&#xe2;y Gaming Asus TUF K1"/>
+                    <StringItem index="7" value="Chu&#x1ed9;t kh&#xf4;ng d&#xe2;y Gaming Asus TUF M4 WL"/>
+                    <StringItem index="8" value="Chu&#x1ed9;t c&#xf3; d&#xe2;y Gaming Asus Keris"/>
+                    <StringItem index="9" value="B&#xe0;n ph&#xed;m c&#xf3; d&#xe2;y DareU EK87 "/>
+                    <StringItem index="10" value="B&#xe0;n ph&#xed;m c&#x1a1; c&#xf3; d&#xe2;y Gaming Razer BlackWidow"/>
+                    <StringItem index="11" value="Chu&#x1ed9;t kh&#xf4;ng d&#xe2;y Rapoo M20 Plus &#x110;en"/>
+                    <StringItem index="12" value="C&#xe1;p Type C- Lightning Apple MM0A3"/>
+                    <StringItem index="13" value="S&#x1ea1;c Hydrus CS-TC027"/>
+                    <StringItem index="14" value="C&#xe1;p Type C Xmobile MU09-1000X"/>
+                    <StringItem index="15" value="&#x110;&#x1ebf; s&#x1ea1;c kh&#xf4;ng d&#xe2;y Mbest AC63F3"/>
+                    <StringItem index="16" value="Tai nghe Bluetooth AirPods 2 Apple MRXJ2"/>
+                    <StringItem index="17" value="Tai nghe Bluetooth AirPods 3 Apple MME73"/>
+                    <StringItem index="18" value="Tai nghe c&#xf3; d&#xe2;y Mozard DS510-WB"/>
+                    <StringItem index="19" value="Tai nghe Bluetooth Ch&#x1ee5;p Tai Kanen K6"/>
+                    <StringItem index="20" value="Tai nghe EP Gaming Asus Rog Cetra II Core"/>
+                    <StringItem index="21" value=" "/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -306,11 +311,17 @@
             </Component>
             <Component class="javax.swing.JLabel" name="TonKho">
               <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="....."/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="soLuongDaBan">
               <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="....."/>
               </Properties>
             </Component>
@@ -331,12 +342,19 @@
                       <Component id="jScrollPane1" pref="484" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
+                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="439" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -354,17 +372,23 @@
                 <Component class="javax.swing.JTable" name="hangDaBan">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="4" rowCount="4">
-                        <Column editable="true" title="m&#xe3; s&#x1ea3;n ph&#x1ea9;m" type="java.lang.Object"/>
-                        <Column editable="true" title="T&#xea;n s&#x1ea3;n ph&#x1ea9;m" type="java.lang.Object"/>
-                        <Column editable="true" title="S&#x1ed1; l&#x1b0;&#x1ee3;ng c&#xf2;n" type="java.lang.Object"/>
-                        <Column editable="true" title="&#xd0;&#xe3; B&#xe1;n" type="java.lang.Object"/>
-                      </Table>
+                      <Table columnCount="0" rowCount="4"/>
                     </Property>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JLabel" name="jLabel5">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Danh s&#xe1;ch &#x111;&#x1a1;n h&#xe0;ng"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>

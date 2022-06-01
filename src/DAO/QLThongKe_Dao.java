@@ -70,8 +70,8 @@ public class QLThongKe_Dao {
         return tong;
     }
 
-    public int ThongKeDoanhThu(String tenSp) throws SQLException {
-        int doanhThu = 0;
+    public long ThongKeDoanhThu(String tenSp) throws SQLException {
+        long doanhThu = 0;
         Connection connection = ConnectDB.getJBDCConnection();
         if (!"Tất cả".equals(tenSp)) {
             String sql = "select donGiaBan,soLuongDat\n"

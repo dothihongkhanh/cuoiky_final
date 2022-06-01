@@ -78,6 +78,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
         daBan = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         hangDaBan = new javax.swing.JTable();
+        jLabel5 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
@@ -91,9 +92,10 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
         tongTien.setText("Doanh thu :");
 
         doanhThu.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        doanhThu.setForeground(new java.awt.Color(255, 0, 0));
         doanhThu.setText(".....");
 
-        thongKeDT.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tất cả", "Samsung Galaxy S22 Ultra 5G", "iPhone 11", "OPPO Ren7 series", "iPhone 13 Pro", "iphone 12 Pro", "Bàn phím có dây Gaming Asus TUF K1", "Chuột không dây Gaming Asus TUF M4 WL", "Chuột có dây Gaming Asus Keris", "Bàn phím có dây DareU EK87 ", "Bàn phím cơ có dây Gaming Razer BlackWidow", "Chuột không dây Rapoo M20 Plus Đen", "Cáp Type C- Lightning Apple MM0A3", "Sạc Hydrus CS-TC027", "Cáp Type C Xmobile MU09-1000X", "Đế sạc không dây Mbest AC63F3", "Tai nghe Bluetooth AirPods 2 Apple MRXJ2", "Tai nghe Bluetooth AirPods 3 Apple MME73", "Tai nghe có dây Mozard DS510-WB", "Tai nghe Bluetooth Chụp Tai Kanen K6", "Tai nghe EP Gaming Asus Rog Cetra II Core", " " }));
+        thongKeDT.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...........", "Tất cả", "Samsung Galaxy S22 Ultra 5G", "iPhone 11", "OPPO Ren7 series", "iPhone 13 Pro", "iphone 12 Pro", "Bàn phím có dây Gaming Asus TUF K1", "Chuột không dây Gaming Asus TUF M4 WL", "Chuột có dây Gaming Asus Keris", "Bàn phím có dây DareU EK87 ", "Bàn phím cơ có dây Gaming Razer BlackWidow", "Chuột không dây Rapoo M20 Plus Đen", "Cáp Type C- Lightning Apple MM0A3", "Sạc Hydrus CS-TC027", "Cáp Type C Xmobile MU09-1000X", "Đế sạc không dây Mbest AC63F3", "Tai nghe Bluetooth AirPods 2 Apple MRXJ2", "Tai nghe Bluetooth AirPods 3 Apple MME73", "Tai nghe có dây Mozard DS510-WB", "Tai nghe Bluetooth Chụp Tai Kanen K6", "Tai nghe EP Gaming Asus Rog Cetra II Core", " " }));
         thongKeDT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 thongKeDTActionPerformed(evt);
@@ -138,7 +140,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(0, 0, 255));
         jLabel2.setText("Kho Hàng");
 
-        thongKeSL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Samsung Galaxy S22 Ultra 5G", "iPhone 11", "OPPO Ren7 series", "iPhone 13 Pro", "iphone 12 Pro", "Bàn phím có dây Gaming Asus TUF K1", "Chuột không dây Gaming Asus TUF M4 WL", "Chuột có dây Gaming Asus Keris", "Bàn phím có dây DareU EK87 ", "Bàn phím cơ có dây Gaming Razer BlackWidow", "Chuột không dây Rapoo M20 Plus Đen", "Cáp Type C- Lightning Apple MM0A3", "Sạc Hydrus CS-TC027", "Cáp Type C Xmobile MU09-1000X", "Đế sạc không dây Mbest AC63F3", "Tai nghe Bluetooth AirPods 2 Apple MRXJ2", "Tai nghe Bluetooth AirPods 3 Apple MME73", "Tai nghe có dây Mozard DS510-WB", "Tai nghe Bluetooth Chụp Tai Kanen K6", "Tai nghe EP Gaming Asus Rog Cetra II Core", " " }));
+        thongKeSL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { ".........", "Samsung Galaxy S22 Ultra 5G", "iPhone 11", "OPPO Ren7 series", "iPhone 13 Pro", "iphone 12 Pro", "Bàn phím có dây Gaming Asus TUF K1", "Chuột không dây Gaming Asus TUF M4 WL", "Chuột có dây Gaming Asus Keris", "Bàn phím có dây DareU EK87 ", "Bàn phím cơ có dây Gaming Razer BlackWidow", "Chuột không dây Rapoo M20 Plus Đen", "Cáp Type C- Lightning Apple MM0A3", "Sạc Hydrus CS-TC027", "Cáp Type C Xmobile MU09-1000X", "Đế sạc không dây Mbest AC63F3", "Tai nghe Bluetooth AirPods 2 Apple MRXJ2", "Tai nghe Bluetooth AirPods 3 Apple MME73", "Tai nghe có dây Mozard DS510-WB", "Tai nghe Bluetooth Chụp Tai Kanen K6", "Tai nghe EP Gaming Asus Rog Cetra II Core", " " }));
         thongKeSL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 thongKeSLActionPerformed(evt);
@@ -151,8 +153,10 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Tồn kho :");
 
+        TonKho.setForeground(new java.awt.Color(255, 0, 0));
         TonKho.setText(".....");
 
+        soLuongDaBan.setForeground(new java.awt.Color(255, 0, 0));
         soLuongDaBan.setText(".....");
 
         javax.swing.GroupLayout khoHangLayout = new javax.swing.GroupLayout(khoHang);
@@ -202,16 +206,20 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
 
         hangDaBan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {},
+                {},
+                {},
+                {}
             },
             new String [] {
-                "mã sản phẩm", "Tên sản phẩm", "Số lượng còn", "Ðã Bán"
+
             }
         ));
         jScrollPane1.setViewportView(hangDaBan);
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel5.setText("Danh sách đơn hàng");
 
         javax.swing.GroupLayout daBanLayout = new javax.swing.GroupLayout(daBan);
         daBan.setLayout(daBanLayout);
@@ -221,11 +229,17 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(daBanLayout.createSequentialGroup()
+                .addGap(190, 190, 190)
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         daBanLayout.setVerticalGroup(
             daBanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(daBanLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
+                .addGap(14, 14, 14)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -284,7 +298,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
     private void thongKeDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDTActionPerformed
       String doanhThuString = null;
           try {
-              doanhThuString= Integer.toString(qLThongKe_Service.ThongKeDoanhThu((String) thongKeDT.getSelectedItem()));
+              doanhThuString= Long.toString(qLThongKe_Service.ThongKeDoanhThu((String) thongKeDT.getSelectedItem()));
           } catch (SQLException ex) {
               Logger.getLogger(ThongKe_JPanelFrom.class.getName()).log(Level.SEVERE, null, ex);
           }
@@ -302,6 +316,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel khoHang;

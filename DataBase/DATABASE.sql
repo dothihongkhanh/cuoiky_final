@@ -97,11 +97,7 @@ alter table SanPham
 		check (donGiaBan >(0)),
 		constraint CK_SP_SLHC
 		check (soLuongHienCon>(0))
---GioiTinh (Nam hoặc Nữ) – mặc định Nam.
-alter table NhanVien
-	add constraint CK_NV_GT
-	check(gioiTinh = N'Nữ' or GioiTinh = N'Nam'),
-	constraint DF_NV_GT default N'Nam' for gioiTinh
+
 
 alter table KhachHang
 	add constraint CK_KH_GT

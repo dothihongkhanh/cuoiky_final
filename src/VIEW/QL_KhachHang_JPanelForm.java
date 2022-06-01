@@ -268,6 +268,11 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
             }
         ));
         tblKhachHang_212.setPreferredSize(new java.awt.Dimension(300, 250));
+        tblKhachHang_212.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblKhachHang_212MouseClicked(evt);
+            }
+        });
         jScrollPane2_212.setViewportView(tblKhachHang_212);
 
         txtSearch_212.setPreferredSize(new java.awt.Dimension(71, 28));
@@ -385,6 +390,24 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
 
         }
     }//GEN-LAST:event_btnXoa_212ActionPerformed
+
+    private void tblKhachHang_212MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblKhachHang_212MouseClicked
+        // TODO add your handling code here:
+        int i = tblKhachHang_212.getSelectedRow();
+        txtTenKH_212.setText(tblKhachHang_212.getValueAt(i,1).toString());
+        String gender = tblKhachHang_212.getValueAt(i,2).toString();
+        if (gender.equalsIgnoreCase("Nam")){
+            rdobtnNam_212.setSelected(true);
+            rdobtnNu_212.setSelected(false);
+        }
+        else{
+            rdobtnNu_212.setSelected(true);
+            rdobtnNam_212.setSelected(false);
+        }
+        txtSDT_212.setText(tblKhachHang_212.getValueAt(i,3).toString());
+        txtAreaDiaChi_212.setText(tblKhachHang_212.getValueAt(i,4).toString());
+
+    }//GEN-LAST:event_tblKhachHang_212MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

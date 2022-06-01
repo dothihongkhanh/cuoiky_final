@@ -69,7 +69,35 @@ public class QL_SanPham_JPanelForm extends javax.swing.JPanel {
             
 
         }
-    }                                          
+    }   
+     
+      private void btnXoa_211ActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+        int row = tblSanPham_211.getSelectedRow();
+        if (row == -1)//nguoi dung chua chon hang nao
+        {
+            JOptionPane.showMessageDialog(QL_SanPham_JPanelForm.this, "Vui lòng chọn sản phẩm cần xóa trước", "Lỗi", JOptionPane.ERROR_MESSAGE);
+
+        } else {
+            int confirm = JOptionPane.showConfirmDialog(QL_SanPham_JPanelForm.this, "Bạn chắc chắn muốn xóa không?");
+            if (confirm == JOptionPane.YES_OPTION) {
+
+                try {
+                    int khId = Integer.valueOf(String.valueOf(tblSanPham_211.getValueAt(row, 0)));
+
+                    spService.deleteSP(spId);
+
+                    defaultTableModel.setRowCount(0);//de xoa het du lieu hien tai
+                    setTableData(spService.getAllUsers());
+                    JOptionPane.showMessageDialog(this, "Xóa thành công!");
+                } catch (SQLException ex) {
+                    Logger.getLogger(QL_SanPham_JPanelForm.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+            }
+
+        }
+    }          
     private void setTableData(List<QL_SanPham_211> sanpham) {
          for (QL_SanPham_211 sp : sanpham) {
             defaultTableModel.addRow(new Object[]{sp.getMaSP_211(), sp.getTenSP_211(), sp.getDonGiaBan_211(), sp.getSoLuongHienCon_211()});

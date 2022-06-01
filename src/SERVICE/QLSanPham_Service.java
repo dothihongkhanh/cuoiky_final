@@ -6,6 +6,7 @@
 package SERVICE;
 
 import DAO.QLSanPham_Dao;
+import MODEL.QL_KhachHang_212;
 import MODEL.QL_SanPham_211;
 import java.sql.SQLException;
 import java.util.List;
@@ -28,8 +29,10 @@ public class QLSanPham_Service {
     public void addSP(QL_SanPham_211 sp) throws SQLException {
         spDao.addSP(sp);
     }
-
-    public void deletePhong(int id) throws SQLException {
+     public void updateSP(QL_SanPham_211 sp) throws SQLException {
+        spDao.updateSP(sp);
+    }
+    public void deleteSP(int id) throws SQLException {
         spDao.deleteSP(id);
     }
 

@@ -28,6 +28,9 @@ public class QLHoaDon_Service {
     public void addPhong(QL_HoaDon_229 hd) throws SQLException {
         hdDao.addDH(hd);
     }
+    public void updateDH(QL_HoaDon_229 hd) throws SQLException {
+        hdDao.updateDH(hd);
+    }
 
     public void deletePhong(int id) throws SQLException {
         hdDao.deleteDH(id);

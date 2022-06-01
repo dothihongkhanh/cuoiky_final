@@ -57,6 +57,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
 
         }
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -181,12 +182,22 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
         btnAdd_212.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/plus.png"))); // NOI18N
         btnAdd_212.setText("Thêm");
         btnAdd_212.setPreferredSize(new java.awt.Dimension(112, 38));
+        btnAdd_212.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdd_212ActionPerformed(evt);
+            }
+        });
 
         btnSua_212.setBackground(new java.awt.Color(153, 153, 255));
         btnSua_212.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSua_212.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/sua.png"))); // NOI18N
         btnSua_212.setText("Sửa");
         btnSua_212.setPreferredSize(new java.awt.Dimension(112, 38));
+        btnSua_212.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSua_212ActionPerformed(evt);
+            }
+        });
 
         btnXoa_212.setBackground(new java.awt.Color(153, 153, 255));
         btnXoa_212.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -408,6 +419,41 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
         txtAreaDiaChi_212.setText(tblKhachHang_212.getValueAt(i,4).toString());
 
     }//GEN-LAST:event_tblKhachHang_212MouseClicked
+
+    private void btnSua_212ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua_212ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnSua_212ActionPerformed
+    
+    private void btnAdd_212ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd_212ActionPerformed
+        // TODO add your handling code here:
+        if (txtTenKH_212.getText().equals("") || txtSDT_212.getText().equals("") || txtAreaDiaChi_212.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Vui lòng điền đầy đủ thông tin!");
+        } else {
+            try {
+                kh.setHoTen_212(txtTenKH_212.getText());
+                kh.setSdt_212(txtSDT_212.getText());
+                kh.setDiachi_212(txtAreaDiaChi_212.getText());
+                String gt = "Nam";
+                if (rdobtnNam_212.isSelected()) {
+                    gt = "Nam";// lua chon 1 trong 2
+                }
+                if (rdobtnNu_212.isSelected()) {
+                    gt = "Nữ";
+                }
+                kh.setGioiTinh_212(gt);
+               
+                khService.addKH(kh);
+                defaultTableModel.setRowCount(0);
+                setTableData(khService.getAllUsers());
+                JOptionPane.showMessageDialog(this, "Thêm khách hàng thành công!");
+            } catch (SQLException ex) {
+                Logger.getLogger(QL_KhachHang_JPanelForm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+
+        }
+    }//GEN-LAST:event_btnAdd_212ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

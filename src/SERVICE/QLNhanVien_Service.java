@@ -24,11 +24,14 @@ public class QLNhanVien_Service {
         return nvDao.getAllUsers();
     }
 
-    public void addPhong(QL_NhanVien_239 nv) throws SQLException {
+    public void addNV(QL_NhanVien_239 nv) throws SQLException {
         nvDao.addNV(nv);
     }
 
-    public void deletePhong(int id) throws SQLException {
+    public void deleteNV(int id) throws SQLException {
         nvDao.deleteNV(id);
+    }
+    public void updateNV(QL_NhanVien_239 kh) throws SQLException {
+        nvDao.updateNV(kh);
     }
 }

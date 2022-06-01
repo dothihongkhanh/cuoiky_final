@@ -6,9 +6,14 @@ package VIEW;
 
 import MODEL.QL_KhuyenMai_212;
 import SERVICE.QLKhuyenMai_Service;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -248,6 +253,11 @@ public class QL_KhuyenMai_JPanelForm extends javax.swing.JPanel {
         btnTimKiem_212.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnTimKiem_212.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/search.png"))); // NOI18N
         btnTimKiem_212.setText("Tìm kiếm");
+        btnTimKiem_212.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTimKiem_212ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpnDSKhuyenMai_212Layout = new javax.swing.GroupLayout(jpnDSKhuyenMai_212);
         jpnDSKhuyenMai_212.setLayout(jpnDSKhuyenMai_212Layout);
@@ -345,6 +355,64 @@ public class QL_KhuyenMai_JPanelForm extends javax.swing.JPanel {
 
         }
     }//GEN-LAST:event_btnLuu_212ActionPerformed
+
+    private void btnTimKiem_212ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimKiem_212ActionPerformed
+        // TODO add your handling code here:
+        Connection conn = null;
+        Statement st = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DriverManager.getConnection("jdbc:sqlserver://localhost;DatabaseName=QUANLITHIETBICONGNGHE_KLN", "sa", "123456");
+            // Câu lệnh xem dữ liệu
+            String sql = "select * from KhuyenMai ";
+            // Nếu tìm kiếm theo title
+            if (txtKhuyenMai_212.getText().length() > 0) {
+                sql = sql + " where mucGiamGia like '%" + txtKhuyenMai_212.getText() + "%'";
+            }
+            // Tạo đối tượng thực thi câu lệnh Select
+            st = conn.createStatement();
+            // Thực thi 
+            rs = st.executeQuery(sql);
+            Vector data = null;
+            defaultTableModel.setRowCount(0);
+            // Nếu ten không tồn tại
+            if (rs.isBeforeFirst() == false) {
+                JOptionPane.showMessageDialog(this, "Tên mức giảm giá không có trong danh sách!");
+                return;
+            }
+            // Trong khi chưa hết dữ liệu
+            while (rs.next()) {
+                data = new Vector();
+                data.add(rs.getInt("MaKM"));
+                data.add(rs.getString("TenCTKM"));
+                data.add(rs.getString("MucGiamGia"));
+                data.add(rs.getString("NgayBatDau"));
+                data.add(rs.getString("NgayKetThuc"));
+                data.add(rs.getString("MoTa"));
+
+                // Thêm một dòng vào table model
+                defaultTableModel.addRow(data);
+            }
+            tbDSKM_212.setModel(defaultTableModel); // Thêm dữ liệu vào table
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+    }//GEN-LAST:event_btnTimKiem_212ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

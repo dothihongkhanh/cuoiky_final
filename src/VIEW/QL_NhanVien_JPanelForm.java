@@ -489,10 +489,11 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
             try {
                 
                 nv.setTenNV_239(tenNV_239.getText());
+                nv.setDiaChi_239(diaChi_239.getText()); 
                 nv.setDienthoai_239(dienthoai_239.getText());
-                nv.setNgaySinh_239(ngaysinh_239.getText());
-                nv.setDiaChi_239(diaChi_239.getText());                
-                nv.setEmail_239(email_239.getText());
+                nv.setVaiTro_239(vaitro_239.getText()); 
+                nv.setNgaySinh_239(ngaysinh_239.getText());                              
+               
                                 
                 String gt = "Nam";
                 if (rdobtnNam_239.isSelected()) {
@@ -502,7 +503,11 @@ public class QL_NhanVien_JPanelForm extends javax.swing.JPanel {
                     gt = "Nữ";
                 }
                 nv.setGioiTinh_239(gt);
-               
+                
+                //////EMAIL
+                nv.setEmail_239(email_239.getText());
+                
+                /////
                 String tt = "Đang làm việc ";
                 if (rdobtnDanglamviec_239.isSelected()) {
                     tt = "Đang làm việc";// lua chon 1 trong 2

@@ -47,18 +47,19 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
         };
         tblKhachHang_212.setModel(defaultTableModel);
 
-        defaultTableModel.addColumn("MaKH");
-        defaultTableModel.addColumn("HoTen");
-        defaultTableModel.addColumn("GioiTinh");
-        defaultTableModel.addColumn("SoDienThoai");
-        defaultTableModel.addColumn("DiaChi");
+        defaultTableModel.addColumn("maKH");
+        defaultTableModel.addColumn("tenKH");
+        defaultTableModel.addColumn("diaChi");
+        defaultTableModel.addColumn("SDT");
+        defaultTableModel.addColumn("gioiTinh");
+
         setTableData(khService.getAllUsers());
 
     }
 
     private void setTableData(List<QL_KhachHang_212> khachhang) {
         for (QL_KhachHang_212 kh : khachhang) {
-            defaultTableModel.addRow(new Object[]{kh.getMaKH_212(), kh.getHoTen_212(), kh.getGioiTinh_212(), kh.getSdt_212(), kh.getDiachi_212()});
+            defaultTableModel.addRow(new Object[]{kh.getMaKH_212(), kh.getHoTen_212(), kh.getDiachi_212(), kh.getSdt_212(), kh.getGioiTinh_212()});
 
         }
     }
@@ -442,7 +443,9 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
         int i = tblKhachHang_212.getSelectedRow();
         txtMaKH_212.setText(tblKhachHang_212.getValueAt(i, 0).toString());
         txtTenKH_212.setText(tblKhachHang_212.getValueAt(i, 1).toString());
-        String gender = tblKhachHang_212.getValueAt(i, 2).toString();
+        txtAreaDiaChi_212.setText(tblKhachHang_212.getValueAt(i, 2).toString());
+        txtSDT_212.setText(tblKhachHang_212.getValueAt(i, 3).toString());
+        String gender = tblKhachHang_212.getValueAt(i, 4).toString();
         if (gender.equalsIgnoreCase("Nam")) {
             rdobtnNam_212.setSelected(true);
             rdobtnNu_212.setSelected(false);
@@ -450,8 +453,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
             rdobtnNu_212.setSelected(true);
             rdobtnNam_212.setSelected(false);
         }
-        txtSDT_212.setText(tblKhachHang_212.getValueAt(i, 3).toString());
-        txtAreaDiaChi_212.setText(tblKhachHang_212.getValueAt(i, 4).toString());
+
 
 
     }//GEN-LAST:event_tblKhachHang_212MouseClicked
@@ -585,7 +587,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
 
     private void cbbLoc_212ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbbLoc_212ItemStateChanged
         // TODO add your handling code here:
-        Connection conn = null;
+       Connection conn = null;
         Statement st = null;
         ResultSet rs = null;
 
@@ -634,6 +636,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
                 ex.printStackTrace();
             }
         }
+
 
     }//GEN-LAST:event_cbbLoc_212ItemStateChanged
 

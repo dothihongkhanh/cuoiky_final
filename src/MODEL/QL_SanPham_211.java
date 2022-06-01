@@ -15,7 +15,7 @@ public class QL_SanPham_211 {
     private String donGiaBan_211;
     private String soLuongHienCon_211;
 
- public int getMaSP_211() {
+    public int getMaSP_211() {
         return maSP_211;
     }
 
@@ -35,16 +35,17 @@ public class QL_SanPham_211 {
         return donGiaBan_211;
     }
 
-    public void setDonGiaBan_211(String DonGiaBan_211) {
+    public void setDonGiaBan_211(String donGiaBan_211) {
         this.donGiaBan_211 = donGiaBan_211;
     }
 
-    public String getSoLuongHienCon_211(String soLuongHienCon_211) {
+    public String getSoLuongHienCon_211() {
         return soLuongHienCon_211;
     }
 
-    public void setSoLuongHienCon_211(String SoLuongHienCon_211) {
+    public void setSoLuongHienCon_211(String soLuongHienCon_211) {
         this.soLuongHienCon_211 = soLuongHienCon_211;
     }
 
+ 
 }

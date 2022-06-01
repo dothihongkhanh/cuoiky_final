@@ -10,6 +10,9 @@ import SERVICE.QLSanPham_Service;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -46,6 +49,27 @@ public class QL_SanPham_JPanelForm extends javax.swing.JPanel {
 
     }
 
+     private void btnThem_211ActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+        if (txtTenSP_211.getText().equals("") || txtDonGiaBan_211.getText().equals("") || txtSoLuongHienCon_211.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Vui lòng điền đầy đủ thông tin!");
+        } else {
+            try {
+                sp.setTenSP_211(txtTenSP_211.getText());
+                sp.setDonGiaBan_211(txtDonGiaBan_211.getText());
+                sp.setSoLuongHienCon_211(txtSoLuongHienCon_211.getText());
+               
+                spService.addSP(sp);
+                defaultTableModel.setRowCount(0);
+                setTableData(spService.getAllUsers());
+                JOptionPane.showMessageDialog(this, "Thêm sản phẩm thành công!");
+            } catch (SQLException ex) {
+                Logger.getLogger(QL_SanPham_JPanelForm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+
+        }
+    }                                          
     private void setTableData(List<QL_SanPham_211> sanpham) {
          for (QL_SanPham_211 sp : sanpham) {
             defaultTableModel.addRow(new Object[]{sp.getMaSP_211(), sp.getTenSP_211(), sp.getDonGiaBan_211(), sp.getSoLuongHienCon_211()});

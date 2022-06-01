@@ -25,12 +25,14 @@ public class QLSanPham_Service {
         return spDao.getAllUsers();
     }
 
-    public void addPhong(QL_SanPham_211 sp) throws SQLException {
+    public void addSP(QL_SanPham_211 sp) throws SQLException {
         spDao.addSP(sp);
     }
 
     public void deletePhong(int id) throws SQLException {
         spDao.deleteSP(id);
     }
+
+    
 }
 

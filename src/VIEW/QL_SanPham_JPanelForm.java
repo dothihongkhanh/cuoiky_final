@@ -83,7 +83,7 @@ public class QL_SanPham_JPanelForm extends javax.swing.JPanel {
             if (confirm == JOptionPane.YES_OPTION) {
 
                 try {
-                    int khId = Integer.valueOf(String.valueOf(tblSanPham_211.getValueAt(row, 0)));
+                    int spId = Integer.valueOf(String.valueOf(tblSanPham_211.getValueAt(row, 0)));
 
                     spService.deleteSP(spId);
 

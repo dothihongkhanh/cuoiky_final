@@ -19,7 +19,7 @@ create table NhanVien
 	diaChi nvarchar(80) ,
 	SDT varchar(11) not null,
 	ngaySinh date ,
-	gioiTinh nvarchar(3),
+	gioiTinh nvarchar(50),
 	email varchar(50),
 	trangThai nvarchar(30)
 )

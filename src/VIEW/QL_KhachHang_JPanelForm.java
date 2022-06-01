@@ -62,7 +62,6 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
 
         }
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -184,11 +183,10 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(12, Short.MAX_VALUE))
                     .addGroup(jPanel2_212Layout.createSequentialGroup()
-                        .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblDC_212)
-                                .addComponent(txtTenKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lblTKH_212, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblDC_212)
+                            .addComponent(txtTenKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblTKH_212))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(rdobtnNu_212)
@@ -328,7 +326,12 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
 
         jLabel5_212.setText("Lọc theo giới tính");
 
-        cbbLoc_212.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ" }));
+        cbbLoc_212.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nữ", "Nam" }));
+        cbbLoc_212.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cbbLoc_212ItemStateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel_ThongTinKH_212Layout = new javax.swing.GroupLayout(jPanel_ThongTinKH_212);
         jPanel_ThongTinKH_212.setLayout(jPanel_ThongTinKH_212Layout);
@@ -449,7 +452,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
         }
         txtSDT_212.setText(tblKhachHang_212.getValueAt(i, 3).toString());
         txtAreaDiaChi_212.setText(tblKhachHang_212.getValueAt(i, 4).toString());
-                
+
 
     }//GEN-LAST:event_tblKhachHang_212MouseClicked
 
@@ -459,7 +462,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
         if (x == JOptionPane.NO_OPTION) {
             return;
         } else {
-           
+
             try {
                 QL_KhachHang_212 kh = new QL_KhachHang_212();
                 kh.setMaKH_212(Integer.parseInt(txtMaKH_212.getText()));
@@ -481,10 +484,9 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
                 Logger.getLogger(QL_KhachHang_JPanelForm.class.getName()).log(Level.SEVERE, null, ex);
             }
 
-            
         }
     }//GEN-LAST:event_btnSua_212ActionPerformed
-    
+
     private void btnAdd_212ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd_212ActionPerformed
         // TODO add your handling code here:
         if (txtTenKH_212.getText().equals("") || txtSDT_212.getText().equals("") || txtAreaDiaChi_212.getText().equals("")) {
@@ -502,7 +504,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
                     gt = "Nữ";
                 }
                 kh.setGioiTinh_212(gt);
-               
+
                 khService.addKH(kh);
                 defaultTableModel.setRowCount(0);
                 setTableData(khService.getAllUsers());
@@ -510,7 +512,6 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
             } catch (SQLException ex) {
                 Logger.getLogger(QL_KhachHang_JPanelForm.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
 
         }
     }//GEN-LAST:event_btnAdd_212ActionPerformed
@@ -544,7 +545,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
             rs = st.executeQuery(sql);
             Vector data = null;
             defaultTableModel.setRowCount(0);
-            // Nếu sách không tồn tại
+            // Nếu ten không tồn tại
             if (rs.isBeforeFirst() == false) {
                 JOptionPane.showMessageDialog(this, "Tên khách hàng không có trong danh sách!");
                 return;
@@ -557,7 +558,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
                 data.add(rs.getString("diaChi"));
                 data.add(rs.getString("SDT"));
                 data.add(rs.getString("gioiTinh"));
-                
+
                 // Thêm một dòng vào table model
                 defaultTableModel.addRow(data);
             }
@@ -581,6 +582,60 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
         }
 
     }//GEN-LAST:event_btnSearch_212ActionPerformed
+
+    private void cbbLoc_212ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbbLoc_212ItemStateChanged
+        // TODO add your handling code here:
+        Connection conn = null;
+        Statement st = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DriverManager.getConnection("jdbc:sqlserver://localhost;DatabaseName=QUANLITHIETBICONGNGHE_KLN", "sa", "123456");
+            // Câu lệnh xem dữ liệu
+            String sql = "select * from KhachHang ";
+            // Nếu tìm kiếm theo title
+
+            sql = sql + " where gioiTinh like '%" + cbbLoc_212.getSelectedItem() + "%'";
+
+            // Tạo đối tượng thực thi câu lệnh Select
+            st = conn.createStatement();
+            // Thực thi 
+            rs = st.executeQuery(sql);
+            Vector data = null;
+            defaultTableModel.setRowCount(0);
+
+            // Trong khi chưa hết dữ liệu
+            while (rs.next()) {
+                data = new Vector();
+                data.add(rs.getInt("maKH"));
+                data.add(rs.getString("tenKH"));
+                data.add(rs.getString("diaChi"));
+                data.add(rs.getString("SDT"));
+                data.add(rs.getString("gioiTinh"));
+
+                // Thêm một dòng vào table model
+                defaultTableModel.addRow(data);
+            }
+            tblKhachHang_212.setModel(defaultTableModel); // Thêm dữ liệu vào table
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+
+    }//GEN-LAST:event_cbbLoc_212ItemStateChanged
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -54,7 +54,8 @@ public class QLKhuyenMai_Dao {
             pstmt.setString(1, km.getTenChuongTrinhKM_212());
             pstmt.setString(2, km.getMucGiamGia_212());
             pstmt.setString(3, km.getNgayBatDau_212());
-            pstmt.setString(4, km.getNgayKetThuc_212());             
+            pstmt.setString(4, km.getNgayKetThuc_212());  
+            pstmt.setString(5, km.getMoTa_212());  
 
             int rs = pstmt.executeUpdate();
             System.out.println(rs);

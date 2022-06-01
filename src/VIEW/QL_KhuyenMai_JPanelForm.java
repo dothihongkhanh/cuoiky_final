@@ -9,6 +9,9 @@ import SERVICE.QLKhuyenMai_Service;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
@@ -113,6 +116,11 @@ public class QL_KhuyenMai_JPanelForm extends javax.swing.JPanel {
         btnLuu_212.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnLuu_212.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/luu.png"))); // NOI18N
         btnLuu_212.setText("Lưu");
+        btnLuu_212.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLuu_212ActionPerformed(evt);
+            }
+        });
 
         btnRefresh_212.setBackground(new java.awt.Color(153, 153, 255));
         btnRefresh_212.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -313,6 +321,30 @@ public class QL_KhuyenMai_JPanelForm extends javax.swing.JPanel {
         txtAreaMoTa_212.setText(tbDSKM_212.getValueAt(i, 5).toString());
 
     }//GEN-LAST:event_tbDSKM_212MouseClicked
+
+    private void btnLuu_212ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLuu_212ActionPerformed
+        // TODO add your handling code here:
+        if (txtTenCTKM_212.getText().equals("") || jDateChooserNBD_212.getCalendar().equals("") || jDateChooserNKT_212.getCalendar().equals("")) {
+            JOptionPane.showMessageDialog(this, "Vui lòng điền đầy đủ thông tin!");
+        } else {
+            try {
+                km.setTenChuongTrinhKM_212(txtTenCTKM_212.getText());
+                km.setMucGiamGia_212(cbxMucGiamGia_212.getSelectedItem().toString());
+                km.setNgayBatDau_212 (new java.sql.Date(jDateChooserNBD_212.getDate().getTime()).toString());
+                km.setNgayKetThuc_212(new java.sql.Date(jDateChooserNKT_212.getDate().getTime()).toString());
+                km.setMoTa_212(txtAreaMoTa_212.getText());
+                
+                kmService.addKM(km);
+                defaultTableModel.setRowCount(0);
+                setTableData(kmService.getAllUsers());
+                JOptionPane.showMessageDialog(this, "Thêm khuyến mãi thành công!");
+            } catch (SQLException ex) {
+                Logger.getLogger(QL_KhachHang_JPanelForm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+
+        }
+    }//GEN-LAST:event_btnLuu_212ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -177,7 +177,10 @@ public class LoginForm extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new Main().setVisible(true);
+        Main m1 = new Main();
+                    m1.setVisible(true);
+                    this.dispose();
+                    this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

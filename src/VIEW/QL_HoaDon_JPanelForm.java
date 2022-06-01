@@ -648,9 +648,7 @@ public class QL_HoaDon_JPanelForm extends javax.swing.JPanel {
 
     private void btnLuu1_229ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLuu1_229ActionPerformed
         // TODO add your handling code here:
-        if (txtmaKH_229.getText().equals("") || txtmaNV_229.getText().equals("") || txtmaKM_229.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Vui lòng điền đầy đủ thông tin!");
-        } else {
+       
             try {
                 dh.setNgayTaoDH_229(new java.sql.Date(jdcNgayTaoDonHang_229.getDate().getTime()).toString());
                 dh.setDiaChiGiaoHang_229(txtDiaChiGiaoHang_229.getText());
@@ -668,7 +666,7 @@ public class QL_HoaDon_JPanelForm extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Thêm đơn Hàng thành công!");
             } catch (SQLException ex) {
                 Logger.getLogger(QL_HoaDon_JPanelForm.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            
 
         }
         

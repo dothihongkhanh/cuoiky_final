@@ -164,8 +164,8 @@ public class QL_SanPham_JPanelForm extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         txtSoLuongHienCon_211 = new java.awt.TextField();
-        btnXoa_211 = new javax.swing.JButton();
         btnthem_211 = new javax.swing.JButton();
+        btnxoa_211 = new javax.swing.JButton();
 
         jButton4.setText("jButton4");
 
@@ -244,10 +244,6 @@ public class QL_SanPham_JPanelForm extends javax.swing.JPanel {
 
         txtSoLuongHienCon_211.setName("SLHienCon_211"); // NOI18N
 
-        btnXoa_211.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
-        btnXoa_211.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/xoa.png"))); // NOI18N
-        btnXoa_211.setText("Xóa");
-
         btnthem_211.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         btnthem_211.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/plus.png"))); // NOI18N
         btnthem_211.setText("Thêm ");
@@ -257,12 +253,21 @@ public class QL_SanPham_JPanelForm extends javax.swing.JPanel {
             }
         });
 
+        btnxoa_211.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnxoa_211.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/xoa.png"))); // NOI18N
+        btnxoa_211.setText("Xóa");
+        btnxoa_211.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnxoa_211ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
@@ -272,9 +277,11 @@ public class QL_SanPham_JPanelForm extends javax.swing.JPanel {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)))
-                    .addComponent(btnXoa_211, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnthem_211, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(btnthem_211, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnxoa_211, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -316,10 +323,10 @@ public class QL_SanPham_JPanelForm extends javax.swing.JPanel {
                     .addComponent(btnSua_211, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnthem_211, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(40, 40, 40)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnLamMoi_211, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnXoa_211, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnLamMoi_211, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnxoa_211, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -382,12 +389,40 @@ public class QL_SanPham_JPanelForm extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnthem_211ActionPerformed
 
+    private void btnxoa_211ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnxoa_211ActionPerformed
+        // TODO add your handling code here:
+        int row = tblSanPham_211.getSelectedRow();
+        if (row == -1)//nguoi dung chua chon hang nao
+        {
+            JOptionPane.showMessageDialog(QL_SanPham_JPanelForm.this, "Vui lòng chọn khách hàng cần xóa trước", "Lỗi", JOptionPane.ERROR_MESSAGE);
+
+        } else {
+            int confirm = JOptionPane.showConfirmDialog(QL_SanPham_JPanelForm.this, "Bạn chắc chắn muốn xóa không?");
+            if (confirm == JOptionPane.YES_OPTION) {
+
+                try {
+                    int spId = Integer.valueOf(String.valueOf(tblSanPham_211.getValueAt(row, 0)));
+
+                    spService.deleteSP(spId);
+
+                    defaultTableModel.setRowCount(0);//de xoa het du lieu hien tai
+                    setTableData(spService.getAllUsers());
+                    JOptionPane.showMessageDialog(this, "Xóa thành công!");
+                } catch (SQLException ex) {
+                    Logger.getLogger(QL_KhachHang_JPanelForm.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+            }
+
+        }
+    }//GEN-LAST:event_btnxoa_211ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLamMoi_211;
     private javax.swing.JButton btnSua_211;
-    private javax.swing.JButton btnXoa_211;
     private javax.swing.JButton btnthem_211;
+    private javax.swing.JButton btnxoa_211;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;

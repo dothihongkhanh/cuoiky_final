@@ -37,7 +37,7 @@ public class QLSanPham_Dao {
                 sp.setDonGiaBan_211(rs.getString("DONGIABAN"));
                 sp.setSoLuongHienCon_211(rs.getString("SOLUONGHIENCON"));
                 
-                 sanpham.add(sp);
+                sanpham.add(sp);
 
             }
         } catch (SQLException e) {
@@ -47,13 +47,14 @@ public class QLSanPham_Dao {
 
     }
 
-    public void addSP(QL_SanPham_211 phong) throws SQLException {
+    public void addSP(QL_SanPham_211 sp) throws SQLException {
         Connection con = ConnectDB.getJBDCConnection();
         String sql = "INSERT INTO SanPham ( TENSP, DONGIABAN, SOLUONGHIENCON) VALUES(?,?,?)";
         try {
             PreparedStatement pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, phong.getTenSP_211());
-            pstmt.setString(2, phong.getDonGiaBan_211());
+            pstmt.setString(1, sp.getTenSP_211());
+            pstmt.setString(2, sp.getDonGiaBan_211());
+            pstmt.setString(3, sp.getSoLuongHienCon_211());
            
                       
 
@@ -67,11 +68,13 @@ public class QLSanPham_Dao {
     }
      public void updateSP(QL_SanPham_211 sp) throws SQLException {
         Connection connection = ConnectDB.getJBDCConnection();
-        String sql = "UPDATE SanPham SET TENSP = ?, DONGIABAN = ? WHERE MASP =?";
+        String sql = "UPDATE SanPham SET TENSP = ?, DONGIABAN = ? ,SOLUONGHIENCON=? WHERE MASP =?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, sp.getTenSP_211());
             preparedStatement.setString(2, sp.getDonGiaBan_211());
+            preparedStatement.setString(3, sp.getSoLuongHienCon_211());
+            preparedStatement.setInt(4, sp.getMaSP_211());
            
            
             

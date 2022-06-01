@@ -82,6 +82,8 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
         rdobtnNu_212 = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtAreaDiaChi_212 = new javax.swing.JTextArea();
+        txtMaKH_212 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
         jPanel3_212 = new javax.swing.JPanel();
         btnAdd_212 = new javax.swing.JButton();
         btnSua_212 = new javax.swing.JButton();
@@ -129,6 +131,10 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
         txtAreaDiaChi_212.setRows(5);
         jScrollPane1.setViewportView(txtAreaDiaChi_212);
 
+        txtMaKH_212.setPreferredSize(new java.awt.Dimension(200, 28));
+
+        jLabel1.setText("Mã KH");
+
         javax.swing.GroupLayout jPanel2_212Layout = new javax.swing.GroupLayout(jPanel2_212);
         jPanel2_212.setLayout(jPanel2_212Layout);
         jPanel2_212Layout.setHorizontalGroup(
@@ -136,19 +142,21 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
             .addGroup(jPanel2_212Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTKH_212)
-                    .addComponent(lblGT_212))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(lblGT_212)
+                    .addComponent(jLabel1)
+                    .addComponent(lblTKH_212))
+                .addGap(12, 12, 12)
                 .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2_212Layout.createSequentialGroup()
                         .addComponent(rdobtnNam_212)
                         .addGap(18, 18, 18)
-                        .addComponent(rdobtnNu_212))
+                        .addComponent(rdobtnNu_212)
+                        .addGap(144, 144, 144)
+                        .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblSDT_212)
+                            .addComponent(lblDC_212)))
+                    .addComponent(txtMaKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtTenKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
-                .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblSDT_212)
-                    .addComponent(lblDC_212))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtSDT_212, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -160,19 +168,26 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
             .addGroup(jPanel2_212Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtTenKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblSDT_212)
-                    .addComponent(lblTKH_212)
-                    .addComponent(txtSDT_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtSDT_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtMaKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(rdobtnNam_212)
-                        .addComponent(rdobtnNu_212)
-                        .addComponent(lblGT_212)
-                        .addComponent(lblDC_212))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2_212Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(12, Short.MAX_VALUE))
+                    .addGroup(jPanel2_212Layout.createSequentialGroup()
+                        .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rdobtnNam_212)
+                            .addComponent(rdobtnNu_212)
+                            .addComponent(lblGT_212)
+                            .addComponent(lblDC_212))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblTKH_212)
+                            .addComponent(txtTenKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
 
         jPanel3_212.setBackground(new java.awt.Color(204, 255, 204));
@@ -477,6 +492,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
     private javax.swing.JButton btnXoa_212;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cbbLoc_212;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5_212;
     private javax.swing.JPanel jPanel1_212;
     private javax.swing.JPanel jPanel2_212;
@@ -493,6 +509,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
     private javax.swing.JRadioButton rdobtnNu_212;
     private javax.swing.JTable tblKhachHang_212;
     private javax.swing.JTextArea txtAreaDiaChi_212;
+    private javax.swing.JTextField txtMaKH_212;
     private javax.swing.JTextField txtSDT_212;
     private javax.swing.JTextField txtSearch_212;
     private javax.swing.JTextField txtTenKH_212;

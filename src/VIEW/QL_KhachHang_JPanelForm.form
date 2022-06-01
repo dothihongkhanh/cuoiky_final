@@ -364,6 +364,9 @@
                       <Dimension value="[112, 38]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLamMoi_212ActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

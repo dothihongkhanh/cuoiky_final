@@ -215,6 +215,11 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
         btnLamMoi_212.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/refresh.png"))); // NOI18N
         btnLamMoi_212.setText("Làm mới");
         btnLamMoi_212.setPreferredSize(new java.awt.Dimension(112, 38));
+        btnLamMoi_212.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLamMoi_212ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3_212Layout = new javax.swing.GroupLayout(jPanel3_212);
         jPanel3_212.setLayout(jPanel3_212Layout);
@@ -454,6 +459,14 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
 
         }
     }//GEN-LAST:event_btnAdd_212ActionPerformed
+
+    private void btnLamMoi_212ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLamMoi_212ActionPerformed
+        // TODO add your handling code here:
+        txtTenKH_212.setText("");
+        txtSDT_212.setText("");
+        txtAreaDiaChi_212.setText("");
+        buttonGroup1.clearSelection();
+    }//GEN-LAST:event_btnLamMoi_212ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

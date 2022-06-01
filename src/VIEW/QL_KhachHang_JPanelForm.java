@@ -9,6 +9,9 @@ import SERVICE.QLKhachHang_Service;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -190,6 +193,11 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
         btnXoa_212.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/xoa.png"))); // NOI18N
         btnXoa_212.setText("Xóa");
         btnXoa_212.setPreferredSize(new java.awt.Dimension(112, 38));
+        btnXoa_212.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnXoa_212ActionPerformed(evt);
+            }
+        });
 
         btnLamMoi_212.setBackground(new java.awt.Color(153, 153, 255));
         btnLamMoi_212.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -323,7 +331,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel1_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel_ThongTinKH_212, javax.swing.GroupLayout.DEFAULT_SIZE, 824, Short.MAX_VALUE)
-                    .addComponent(jPanel_ThietLapTTKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel_ThietLapTTKH_212, javax.swing.GroupLayout.PREFERRED_SIZE, 824, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1_212Layout.setVerticalGroup(
@@ -346,9 +354,37 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1_212, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 31, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnXoa_212ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa_212ActionPerformed
+        // TODO add your handling code here:
+        int row = tblKhachHang_212.getSelectedRow();
+        if (row == -1)//nguoi dung chua chon hang nao
+        {
+            JOptionPane.showMessageDialog(QL_KhachHang_JPanelForm.this, "Vui lòng chọn khách hàng cần xóa trước", "Lỗi", JOptionPane.ERROR_MESSAGE);
+
+        } else {
+            int confirm = JOptionPane.showConfirmDialog(QL_KhachHang_JPanelForm.this, "Bạn chắc chắn muốn xóa không?");
+            if (confirm == JOptionPane.YES_OPTION) {
+
+                try {
+                    int khId = Integer.valueOf(String.valueOf(tblKhachHang_212.getValueAt(row, 0)));
+
+                    khService.deleteKH(khId);
+
+                    defaultTableModel.setRowCount(0);//de xoa het du lieu hien tai
+                    setTableData(khService.getAllUsers());
+                    JOptionPane.showMessageDialog(this, "Xóa thành công!");
+                } catch (SQLException ex) {
+                    Logger.getLogger(QL_KhachHang_JPanelForm.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+            }
+
+        }
+    }//GEN-LAST:event_btnXoa_212ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -35,6 +35,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
 
     public QL_KhachHang_JPanelForm() throws SQLException {
         initComponents();
+        txtMaKH_212.setEnabled(false);
         khService = new QLKhachHang_Service();
         kh = new QL_KhachHang_212();
 
@@ -101,6 +102,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
         btnSearch_212 = new javax.swing.JButton();
         jLabel5_212 = new javax.swing.JLabel();
         cbbLoc_212 = new javax.swing.JComboBox<>();
+        btnTaiLai_212 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 255, 204));
         setPreferredSize(new java.awt.Dimension(836, 548));
@@ -334,6 +336,15 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
             }
         });
 
+        btnTaiLai_212.setBackground(new java.awt.Color(204, 204, 255));
+        btnTaiLai_212.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnTaiLai_212.setText("Tải lại");
+        btnTaiLai_212.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTaiLai_212ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel_ThongTinKH_212Layout = new javax.swing.GroupLayout(jPanel_ThongTinKH_212);
         jPanel_ThongTinKH_212.setLayout(jPanel_ThongTinKH_212Layout);
         jPanel_ThongTinKH_212Layout.setHorizontalGroup(
@@ -346,7 +357,9 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
                     .addComponent(jLabel5_212)
                     .addGroup(jPanel_ThongTinKH_212Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(cbbLoc_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel_ThongTinKH_212Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnTaiLai_212)
+                            .addComponent(cbbLoc_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(43, 43, 43))
             .addGroup(jPanel_ThongTinKH_212Layout.createSequentialGroup()
                 .addGap(91, 91, 91)
@@ -368,7 +381,9 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
                         .addComponent(jLabel5_212)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cbbLoc_212, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(175, 175, 175))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnTaiLai_212)
+                        .addGap(135, 135, 135))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_ThongTinKH_212Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                         .addComponent(jScrollPane2_212, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -428,6 +443,11 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
 
                     defaultTableModel.setRowCount(0);//de xoa het du lieu hien tai
                     setTableData(khService.getAllUsers());
+                    txtMaKH_212.setText("");
+                    txtTenKH_212.setText("");
+                    txtSDT_212.setText("");
+                    txtAreaDiaChi_212.setText("");
+                    buttonGroup1.clearSelection();
                     JOptionPane.showMessageDialog(this, "Xóa thành công!");
                 } catch (SQLException ex) {
                     Logger.getLogger(QL_KhachHang_JPanelForm.class.getName()).log(Level.SEVERE, null, ex);
@@ -439,6 +459,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
     }//GEN-LAST:event_btnXoa_212ActionPerformed
 
     private void tblKhachHang_212MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblKhachHang_212MouseClicked
+        
         // TODO add your handling code here:
         txtMaKH_212.setEnabled(false);
         int i = tblKhachHang_212.getSelectedRow();
@@ -483,6 +504,7 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
                 khService.updateKH(kh);
                 defaultTableModel.setRowCount(0);
                 setTableData(khService.getAllUsers());
+                JOptionPane.showMessageDialog(this, "Sửa thông tin khách hàng thành công!");
             } catch (SQLException ex) {
                 Logger.getLogger(QL_KhachHang_JPanelForm.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -642,12 +664,23 @@ public class QL_KhachHang_JPanelForm extends javax.swing.JPanel {
 
     }//GEN-LAST:event_cbbLoc_212ItemStateChanged
 
+    private void btnTaiLai_212ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaiLai_212ActionPerformed
+        // TODO add your handling code here:
+        defaultTableModel.setRowCount(0);
+        try {
+            setTableData(khService.getAllUsers());
+        } catch (SQLException ex) {
+            Logger.getLogger(QL_KhachHang_JPanelForm.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnTaiLai_212ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd_212;
     private javax.swing.JButton btnLamMoi_212;
     private javax.swing.JButton btnSearch_212;
     private javax.swing.JButton btnSua_212;
+    private javax.swing.JButton btnTaiLai_212;
     private javax.swing.JButton btnXoa_212;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cbbLoc_212;

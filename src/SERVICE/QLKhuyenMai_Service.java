@@ -27,5 +27,10 @@ public class QLKhuyenMai_Service {
     public void addKM(QL_KhuyenMai_212 km) throws SQLException {
         kmDao.addKM(km);
     }
-
+    public void updateKM(QL_KhuyenMai_212 km) throws SQLException {
+        kmDao.updateKM(km);
+    }
+    public void deleteKM(int id) throws SQLException {;
+        kmDao.deleteKM(id);
+    }
 }

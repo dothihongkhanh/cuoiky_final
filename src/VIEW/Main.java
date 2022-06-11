@@ -22,7 +22,7 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);//hien thi giua man hinh
 
-        setTitle("Quan ly ban thiet bi cong nghe");
+        setTitle("Quan ly ban thiet bi cong nghe nhom KLN");
 
         ChuyenManHinhController controller = new ChuyenManHinhController(jpnView);
         controller.setView( jpnTrangChu, jlbTrangChu);

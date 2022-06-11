@@ -49,19 +49,19 @@ public class QLNhanVien_Dao {
 
     }
 
-    public void addNV(QL_NhanVien_239 phong) throws SQLException {
+    public void addNV(QL_NhanVien_239 nv) throws SQLException {
         Connection con = ConnectDB.getJBDCConnection();
         String sql = "INSERT INTO NhanVien ( TENNV, VAITRO,  DIACHI, SDT, NGAYSINH, GIOITINH, EMAIL,  TRANGTHAI ) VALUES(?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, phong.getTenNV_239());
-            pstmt.setString(2, phong.getVaiTro_239()); 
-            pstmt.setString(3, phong.getDiaChi_239());
-            pstmt.setString(4, phong.getDienthoai_239());  
-            pstmt.setString(5, phong.getNgaySinh_239());  
-            pstmt.setString(6, phong.getNgaySinh_239());  
-            pstmt.setString(7, phong.getEmail_239());  
-            pstmt.setString(8, phong.getTrangThai_239());  
+            pstmt.setString(1, nv.getTenNV_239());
+            pstmt.setString(2, nv.getVaiTro_239()); 
+            pstmt.setString(3, nv.getDiaChi_239());
+            pstmt.setString(4, nv.getDienthoai_239());  
+            pstmt.setString(5, nv.getNgaySinh_239());  
+            pstmt.setString(6, nv.getGioiTinh_239()); 
+            pstmt.setString(7, nv.getEmail_239());  
+            pstmt.setString(8, nv.getTrangThai_239());  
 
             int rs = pstmt.executeUpdate();
             System.out.println(rs);
@@ -84,6 +84,7 @@ public class QLNhanVien_Dao {
             preparedStatement.setString(6, nv.getGioiTinh_239());
             preparedStatement.setString(7, nv.getEmail_239());
             preparedStatement.setString(8, nv.getTrangThai_239());
+            preparedStatement.setInt(9, nv.getMaNV_239());
            
             
             int rs = preparedStatement.executeUpdate();

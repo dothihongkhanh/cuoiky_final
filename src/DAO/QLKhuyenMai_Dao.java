@@ -4,6 +4,7 @@
  */
 package DAO;
 
+import MODEL.QL_KhachHang_212;
 import MODEL.QL_KhuyenMai_212;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -63,6 +64,37 @@ public class QLKhuyenMai_Dao {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+    public void updateKM(QL_KhuyenMai_212 km) throws SQLException {
+        Connection connection = ConnectDB.getJBDCConnection();
+        String sql = "UPDATE KhuyenMai SET TENCTKM = ?, MUCGIAMGIA = ?, NGAYBATDAU = ?,NGAYKETTHUC = ?,MOTA = ? WHERE MAKM =?";
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, km.getTenChuongTrinhKM_212());
+            preparedStatement.setString(2, km.getMucGiamGia_212());
+            preparedStatement.setString(3, km.getNgayBatDau_212());
+            preparedStatement.setString(4, km.getNgayKetThuc_212());
+            preparedStatement.setString(5, km.getMoTa_212());
+            preparedStatement.setInt(6, km.getMaKM_212());
+            
+            preparedStatement.executeUpdate();;
+       }catch(Exception e){
+            
+        }
+    }
+
+    public void deleteKM(int id) throws SQLException {
+        Connection connection = ConnectDB.getJBDCConnection();
+
+        String sql = "delete from KhuyenMai where MAKM = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, id);
+            int rs = preparedStatement.executeUpdate();
+            System.out.println(rs);
+        } catch (SQLException e) {
         }
     }
 }

@@ -112,13 +112,13 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
                         .addGap(15, 15, 15)
                         .addComponent(tongTien, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(doanhThu, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(doanhThu, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(doanhThuPNLayout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addGroup(doanhThuPNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(thongKeDT, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 51, Short.MAX_VALUE))
+                .addGap(0, 18, Short.MAX_VALUE))
         );
         doanhThuPNLayout.setVerticalGroup(
             doanhThuPNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,7 +199,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
                 .addGroup(khoHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(TonKho))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
 
         daBan.setBackground(new java.awt.Color(153, 255, 153));
@@ -225,23 +225,19 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
         daBan.setLayout(daBanLayout);
         daBanLayout.setHorizontalGroup(
             daBanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, daBanLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(daBanLayout.createSequentialGroup()
-                .addGap(190, 190, 190)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(151, 151, 151))
         );
         daBanLayout.setVerticalGroup(
             daBanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(daBanLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addContainerGap()
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -302,7 +298,7 @@ public class ThongKe_JPanelFrom extends javax.swing.JPanel {
           } catch (SQLException ex) {
               Logger.getLogger(ThongKe_JPanelFrom.class.getName()).log(Level.SEVERE, null, ex);
           }
-           doanhThu.setText(doanhThuString);  
+           doanhThu.setText(doanhThuString+" VND");  
     }//GEN-LAST:event_thongKeDTActionPerformed
 
 

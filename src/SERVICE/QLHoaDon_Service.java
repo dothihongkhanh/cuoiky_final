@@ -25,14 +25,14 @@ public class QLHoaDon_Service {
         return hdDao.getAllUsers();
     }
 
-    public void addPhong(QL_HoaDon_229 hd) throws SQLException {
+    public void addDH(QL_HoaDon_229 hd) throws SQLException {
         hdDao.addDH(hd);
     }
     public void updateDH(QL_HoaDon_229 hd) throws SQLException {
         hdDao.updateDH(hd);
     }
 
-    public void deletePhong(int id) throws SQLException {
+    public void deleteDH(int id) throws SQLException {
         hdDao.deleteDH(id);
     }
 }

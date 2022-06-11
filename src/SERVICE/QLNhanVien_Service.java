@@ -31,7 +31,7 @@ public class QLNhanVien_Service {
     public void deleteNV(int id) throws SQLException {
         nvDao.deleteNV(id);
     }
-    public void updateNV(QL_NhanVien_239 kh) throws SQLException {
-        nvDao.updateNV(kh);
+    public void updateNV(QL_NhanVien_239 nv) throws SQLException {
+        nvDao.updateNV(nv);
     }
 }

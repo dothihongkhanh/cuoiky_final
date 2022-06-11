@@ -17,9 +17,9 @@ public class QL_HoaDon_229 {
     private String  phuongThucThanhToan_229;
     private String  thoiGianThanhToan_229;
     private String  thoiGianGiaoHang_229;
-    private String  maKH_229;
-    private String  maNV_229;
-    private String maKM_229;
+    private int   maKH_229;
+    private int   maNV_229;
+    private int  maKM_229;
 
     public int getMaDH_229() {
         return maDH_229;
@@ -69,29 +69,30 @@ public class QL_HoaDon_229 {
         this.thoiGianGiaoHang_229 = thoiGianGiaoHang_229;
     }
 
-    public String getMaKH_229() {
+    public int getMaKH_229() {
         return maKH_229;
     }
 
-    public void setMaKH_229(String maKH_229) {
+    public void setMaKH_229(int maKH_229) {
         this.maKH_229 = maKH_229;
     }
 
-    public String getMaNV_229() {
+    public int getMaNV_229() {
         return maNV_229;
     }
 
-    public void setMaNV_229(String maNV_229) {
+    public void setMaNV_229(int maNV_229) {
         this.maNV_229 = maNV_229;
     }
 
-    public String getMaKM_229() {
+    public int getMaKM_229() {
         return maKM_229;
     }
 
-    public void setMaKM_229(String maKM_229) {
+    public void setMaKM_229(int maKM_229) {
         this.maKM_229 = maKM_229;
     }
 
+   
     
 }

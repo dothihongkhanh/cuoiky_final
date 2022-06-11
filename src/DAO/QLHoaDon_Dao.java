@@ -36,9 +36,9 @@ public class QLHoaDon_Dao {
                 hd.setPhuongThucThanhToan_229(rs.getString("PHUONGTHUCTHANHTOAN"));
                 hd.setThoiGianThanhToan_229(rs.getString("THOIGIANTHANHTOAN"));
                 hd.setThoiGianGiaoHang_229(rs.getString("THOIGIANGIAOHANG"));
-                hd.setMaKH_229(rs.getString("MAKH"));
-                hd.setMaNV_229(rs.getString("MANV"));
-                hd.setMaKM_229(rs.getString("MAKM"));
+                hd.setMaKH_229(rs.getInt("MAKH"));
+                hd.setMaNV_229(rs.getInt("MANV"));
+                hd.setMaKM_229(rs.getInt("MAKM"));
               
                 hoadon.add(hd);
 
@@ -50,19 +50,19 @@ public class QLHoaDon_Dao {
 
     }
 
-    public void addDH(QL_HoaDon_229 phong) throws SQLException {
+    public void addDH(QL_HoaDon_229 hd) throws SQLException {
         Connection con = ConnectDB.getJBDCConnection();
-        String sql = "INSERT INTO HoaDon ( NGAYTAODH, DIACHIGIAOHANG, PHUONGTHUCTHANHTOAN, THOIGIANTHANHTOAN, MAKH, MANV, MAKM) VALUES(?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO HoaDon ( NGAYTAODH, DIACHIGIAOHANG, PHUONGTHUCTHANHTOAN, THOIGIANTHANHTOAN, THOIGIANGIAOHANG, MAKH, MANV, MAKM) VALUES(?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, phong.getNgayTaoDH_229());
-            pstmt.setString(2, phong.getDiaChiGiaoHang_229());
-            pstmt.setString(3, phong.getPhuongThucThanhToan_229());
-            pstmt.setString(4, phong.getThoiGianThanhToan_229()); 
-            pstmt.setString(5, phong.getThoiGianGiaoHang_229());
-            pstmt.setString(6, phong.getMaKH_229());
-            pstmt.setString(7, phong.getMaNV_229());
-            pstmt.setString(8, phong.getMaKM_229());
+            pstmt.setString(1, hd.getNgayTaoDH_229());
+            pstmt.setString(2, hd.getDiaChiGiaoHang_229());
+            pstmt.setString(3, hd.getPhuongThucThanhToan_229());
+            pstmt.setString(4, hd.getThoiGianThanhToan_229()); 
+            pstmt.setString(5, hd.getThoiGianGiaoHang_229());
+            pstmt.setInt(6, hd.getMaKH_229());
+            pstmt.setInt(7, hd.getMaNV_229());
+            pstmt.setInt(8, hd.getMaKM_229());
 
             int rs = pstmt.executeUpdate();
             System.out.println(rs);
@@ -74,7 +74,7 @@ public class QLHoaDon_Dao {
     }
      public void updateDH(QL_HoaDon_229 hd) throws SQLException {
         Connection connection = ConnectDB.getJBDCConnection();
-        String sql = "UPDATE HoaDon SET NGAYTAODH = ?, DIACHIGIAOHANG = ?, PHUONGTHUCTHANHTOAN = ?,THOIGIANTHANHTOAN = ?, MAKH =?, MANV =?,MAKM =?  WHERE MADH =?";
+        String sql = "UPDATE HoaDon SET NGAYTAODH = ?, DIACHIGIAOHANG = ?, PHUONGTHUCTHANHTOAN = ?,THOIGIANTHANHTOAN = ?,THOIGIANGIAOHANG = ? MAKH =?, MANV =?,MAKM =?  WHERE MADH =?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, hd.getNgayTaoDH_229());
@@ -82,9 +82,10 @@ public class QLHoaDon_Dao {
             preparedStatement.setString(3, hd.getPhuongThucThanhToan_229());
             preparedStatement.setString(4, hd.getThoiGianThanhToan_229());
             preparedStatement.setString(5, hd.getThoiGianGiaoHang_229());
-            preparedStatement.setString(6, hd.getMaKH_229());
-            preparedStatement.setString(7, hd.getMaNV_229());
-            preparedStatement.setString(8, hd.getMaKM_229());
+            preparedStatement.setInt(6, hd.getMaKH_229());
+            preparedStatement.setInt(7, hd.getMaNV_229());
+            preparedStatement.setInt(8, hd.getMaKM_229());
+            preparedStatement.setInt(9, hd.getMaDH_229());
             
             int rs = preparedStatement.executeUpdate();
             System.out.println(rs);
